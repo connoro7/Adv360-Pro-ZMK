@@ -2,37 +2,37 @@ macro_crsr_word_back: macro_crsr_word_back{
 compatible = "zmk,behavior-macro";
 label = "macro_crsr_word_back";
 #binding-cells = <0>;
-bindings = <&kt LALT>, <&kp LEFT>, <&kt LALT>;
+bindings = <&kp LA(LEFT)>;
 };
 macro_crsr_word_fwd: macro_crsr_word_fwd{
 compatible = "zmk,behavior-macro";
 label = "macro_crsr_word_fwd";
 #binding-cells = <0>;
-bindings = <&kt LALT>, <&kp RIGHT>, <&kt LALT>;
+bindings = <&kp LA(RIGHT)>;
 };
 macro_quit: macro_quit{
 compatible = "zmk,behavior-macro";
 label = "macro_quit";
 #binding-cells = <0>;
-bindings = <&kp LCTRL>, <&kp C>, <&kp COLON>, <&kp Q>, <&kp ENTER>;
+bindings = <&kp LC(C)>, <&kp COLON>, <&kp Q>, <&kp ENTER>;
 };
 macro_write: macro_write{
 compatible = "zmk,behavior-macro";
 label = "macro_write";
 #binding-cells = <0>;
-bindings = <&kp LCTRL>, <&kp C>, <&kp COLON>, <&kp W>, <&kp ENTER>;
+bindings = <&kp LC(C)>, <&kp COLON>, <&kp W>, <&kp ENTER>;
 };
 macro_wq: macro_wq{
 compatible = "zmk,behavior-macro";
 label = "macro_wq";
 #binding-cells = <0>;
-bindings = <&kp LCTRL>, <&kp C>, <&kp COLON>, <&kp W>, <&kp Q>, <&kp ENTER>;
+bindings = <&kp LC(C)>, <&kp COLON>, <&kp W>, <&kp Q>, <&kp ENTER>;
 };
 macro_ctrl_c: macro_ctrl_c{
 compatible = "zmk,behavior-macro";
 label = "macro_ctrl_c";
 #binding-cells = <0>;
-bindings = <&kp LCTRL>, <&kp C>;
+bindings = <&kp LC(C)>;
 };
 macro_pf: macro_pf{
 compatible = "zmk,behavior-macro";
