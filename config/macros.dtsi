@@ -1,3 +1,9 @@
+macro_codesmith: macro_codesmith{
+compatible = "zmk,behavior-macro";
+label = "macro_codesmith";
+#binding-cells = <0>;
+bindings = <&kp C>, <&kp O>, <&kp D>, <&kp E>, <&kp S>, <&kp M>, <&kp I>, <&kp T>, <&kp H>;
+};
 macro_del_word_back: macro_del_word_back{
 compatible = "zmk,behavior-macro";
 label = "macro_del_word_back";
