@@ -2,13 +2,13 @@ macro_del_word_back: macro_del_word_back{
 compatible = "zmk,behavior-macro";
 label = "macro_del_word_back";
 #binding-cells = <0>;
-bindings = <&kp LC(BACKSPACE)>;
+bindings = <&kp LA>;
 };
 macro_del_word_fwd: macro_del_word_fwd{
 compatible = "zmk,behavior-macro";
 label = "macro_del_word_fwd";
 #binding-cells = <0>;
-bindings = <&kp LC(DEL)>;
+bindings = <&kp LA>;
 };
 macro_crsr_word_back: macro_crsr_word_back{
 compatible = "zmk,behavior-macro";
