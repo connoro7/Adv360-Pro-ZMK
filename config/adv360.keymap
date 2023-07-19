@@ -59,11 +59,11 @@
 
         layer_fn {
             bindings = <
-      &kp F1     &kp F2        &kp F3                 &kp F4                &kp F5  &kp F6                      &tog 1                                                            &mo 3  &kp F7         &kp F8          &kp F9          &kp F10  &kp F11     &kp F12
- &macro_quit  &macro_wq  &macro_write                 &trans                &trans  &trans            &macro_codesmith                                                            &none  &trans  &macro_quotes  &macro_dquotes           &trans   &trans      &trans
-      &trans     &trans     &macro_pv              &macro_ps             &macro_pf  &trans                       &none  &kp LGUI   &kp LALT                  &kp LALT  &kp RGUI   &none  &trans  &macro_braces   &macro_parens  &macro_brackets   &trans      &trans
-  &kp LSHIFT     &trans        &trans   &macro_del_word_back   &macro_del_word_fwd  &trans                                           &trans                    &trans                    &trans         &trans          &kp UP           &trans   &trans  &kp RSHIFT
-      &trans     &trans     &kp LCTRL  &macro_crsr_word_back  &macro_crsr_word_fwd                       &macro_ctrl_c    &trans  &kp SPACE                    &trans    &trans  &trans               &kp LEFT        &kp DOWN        &kp RIGHT   &trans      &trans
+      &kp F1       &kp F2        &kp F3                 &kp F4                &kp F5  &kp F6                          &tog 1                                                                        &mo 3  &kp F7         &kp F8          &kp F9          &kp F10  &kp F11     &kp F12
+ &macro_quit  &macro_quit  &macro_write                 &trans                &trans  &trans                &macro_codesmith                                                                        &none  &trans  &macro_quotes  &macro_dquotes           &trans   &trans      &trans
+      &trans       &trans     &macro_pv              &macro_ps             &macro_pf  &trans                  &macro_kinesis             &kp LGUI   &kp LALT                   &kp LALT  &kp RGUI   &none  &trans  &macro_braces   &macro_parens  &macro_brackets   &trans      &trans
+  &kp LSHIFT       &trans     &kp LG(X)              &kp LG(C)             &kp LG(V)  &trans                                                           &none                     &trans                    &trans         &trans          &kp UP           &trans   &trans  &kp RSHIFT
+      &trans       &trans     &kp LCTRL  &macro_crsr_word_back  &macro_crsr_word_fwd                    &macro_del_word_back  &macro_del_word_fwd  &kp SPACE                  &kp RCTRL     &none   &none               &kp LEFT        &kp DOWN        &kp RIGHT   &trans      &trans
             >;
         };
 
