@@ -1,3 +1,15 @@
+macro_gpo_grph: macro_gpo_grph{
+compatible = "zmk,behavior-macro";
+label = "macro_gpo_grph";
+#binding-cells = <0>;
+bindings = <&kp G>, <&kp P>, <&kp O>, <&kp PLUS>, <&kp PLUS>;
+};
+macro_gpullo_grph: macro_gpullo_grph{
+compatible = "zmk,behavior-macro";
+label = "macro_gpullo_grph";
+#binding-cells = <0>;
+bindings = <&kp G>, <&kp P>, <&kp U>, <&kp L>, <&kp L>, <&kp O>, <&kp PLUS>, <&kp PLUS>, <&kp ENTER>;
+};
 macro_codesmith: macro_codesmith{
 compatible = "zmk,behavior-macro";
 label = "macro_codesmith";
