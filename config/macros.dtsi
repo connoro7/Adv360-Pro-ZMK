@@ -1,3 +1,15 @@
+macro_github: macro_github{
+compatible = "zmk,behavior-macro";
+label = "macro_github";
+#binding-cells = <0>;
+bindings = <&kp H>, <&kp T>, <&kp T>, <&kp P>, <&kp S>, <&kp COLON>, <&kp SLASH>, <&kp SLASH>, <&kp G>, <&kp I>, <&kp T>, <&kp H>, <&kp U>, <&kp B>, <&kp PERIOD>, <&kp C>, <&kp O>, <&kp M>, <&kp SLASH>, <&kp C>, <&kp O>, <&kp N>, <&kp N>, <&kp O>, <&kp R>, <&kp O>, <&kp NUMBER_7>;
+};
+macro_linkedin: macro_linkedin{
+compatible = "zmk,behavior-macro";
+label = "macro_linkedin";
+#binding-cells = <0>;
+bindings = <&kp H>, <&kp T>, <&kp T>, <&kp P>, <&kp S>, <&kp COLON>, <&kp SLASH>, <&kp SLASH>, <&kp W>, <&kp W>, <&kp W>, <&kp PERIOD>, <&kp L>, <&kp I>, <&kp N>, <&kp K>, <&kp E>, <&kp D>, <&kp I>, <&kp N>, <&kp PERIOD>, <&kp C>, <&kp O>, <&kp M>, <&kp SLASH>, <&kp I>, <&kp N>, <&kp SLASH>, <&kp C>, <&kp O>, <&kp N>, <&kp N>, <&kp O>, <&kp R>, <&kp MINUS>, <&kp D>, <&kp I>, <&kp L>, <&kp L>, <&kp O>, <&kp N>;
+};
 macro_angles: macro_angles{
 compatible = "zmk,behavior-macro";
 label = "macro_angles";
