@@ -99,11 +99,11 @@
 
         layer_media {
             bindings = <
-           &to 0   &trans   &trans      &trans      &trans    &trans             &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-          &trans  &kp F13  &kp F14     &kp F15     &kp F16   &kp F17            &kp F18                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &macro_devtools  &kp F19  &kp F20     &kp F21     &kp F22   &kp F23            &kp F24  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-          &trans   &trans   &trans  &kp C_PREV  &kp C_NEXT  &kp C_PP                             &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-          &trans   &trans   &trans      &trans      &trans                       &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           &to 0   &trans   &trans      &trans  &macro_linkedin  &macro_github             &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &trans  &kp F13  &kp F14     &kp F15          &kp F16        &kp F17            &kp F18                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &macro_devtools  &kp F19  &kp F20     &kp F21          &kp F22        &kp F23            &kp F24  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &trans   &trans   &trans  &kp C_PREV       &kp C_NEXT       &kp C_PP                             &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+          &trans   &trans   &trans      &trans           &trans                            &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
