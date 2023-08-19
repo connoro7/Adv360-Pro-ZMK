@@ -1,6 +1,6 @@
 #!/bin/bash
-
 # Debug mode #!/bin/bash -x -v
+
 
 # f.sh
 # (f)lashes firmware onto Kinesis Adv360 Pro boards with a single key-press to step through each script
@@ -9,21 +9,15 @@
 # Clean up old firmware files and unzips new firmware
 read -n 1 -p "Unpack new firmware?"
 
-./cf.sh
-
-echo "Done"
+./clean_firmware && "Done"
 
 # Wait for keypress to flash left board
 read -n 1 -p "Flash left board?"
 
-./l.sh
-
-echo "Done"
+./left && "Done"
 
 # Wait for keypress to flash right board
 read -n 1 -p "Flash right board?"
 
-./r.sh
-
-echo "Done"
+./right && "Done"
 
