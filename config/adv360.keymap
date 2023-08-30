@@ -89,11 +89,11 @@
 
         layer_brackets {
             bindings = <
-      &to 0  &trans  &trans  &trans           &trans               &trans                     &trans                                                  &trans             &trans                &trans                 &trans  &trans  &trans  &trans
-     &trans  &trans  &trans  &trans     &macro_arrow  &macro_double_arrow            &macro_arrow_fn                                                  &trans             &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE  &trans  &trans  &trans
-     &trans  &trans  &trans  &trans    &macro_parens        &macro_braces                     &trans  &trans  &trans                  &trans  &trans  &trans  &macro_into_paren  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
- &caps_word  &trans  &trans  &trans  &macro_brackets        &macro_angles                                     &trans                  &trans                             &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans  &trans  &trans
-     &trans  &trans  &trans  &trans           &trans                                          &trans  &trans  &trans                  &trans  &trans  &trans                                   &trans                 &trans  &trans  &trans  &trans
+      &to 0  &trans  &trans  &trans           &trans               &trans                       &trans                                                  &trans  &trans                &trans                 &trans  &trans  &trans  &trans
+     &trans  &trans  &trans  &trans     &macro_arrow  &macro_double_arrow              &macro_arrow_fn                                                  &trans  &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE  &trans  &trans  &trans
+     &trans  &trans  &trans  &trans    &macro_parens        &macro_braces            &macro_into_paren  &trans  &trans                  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
+ &caps_word  &trans  &trans  &trans  &macro_brackets        &macro_angles                                       &trans                  &trans                  &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans  &trans  &trans
+     &trans  &trans  &trans  &trans           &trans                                            &trans  &trans  &trans                  &trans  &trans  &trans                        &kp LT                 &kp GT  &trans  &trans  &trans
             >;
         };
 
