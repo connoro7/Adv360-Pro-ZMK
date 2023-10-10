@@ -79,11 +79,11 @@
 
         layer_punctuation {
             bindings = <
-                &to 0     &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans        &trans               &trans           &trans     &trans                 &trans
-               &trans     &trans  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                                                     &trans        &kp TILDE  &macro_arrow  &macro_double_arrow  &macro_arrow_fn     &trans                 &trans
-               &trans  &kp LC(P)     &kp PERCENT      &kp COLON  &trans  &trans            &trans  &trans  &trans                  &trans     &trans  &trans        &kp GRAVE     &kp MINUS             &kp PLUS        &kp EQUAL  &kp LC(N)                 &trans
- &mt LEFT_SHIFT LC(P)     &trans       &kp COMMA     &kp PERIOD  &trans  &trans                            &trans                  &trans                     &kp EXCLAMATION        &trans               &trans           &trans     &trans  &mt RIGHT_SHIFT LC(N)
-               &trans     &trans          &trans         &trans  &trans                    &trans  &trans  &trans                  &trans  &kp LC(Y)  &trans                         &trans               &trans           &trans     &trans                 &trans
+                &to 0     &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans         &trans          &trans     &trans     &trans                 &trans
+               &trans     &trans  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                                                     &trans        &kp TILDE  &macro_quotes  &macro_dquotes     &trans     &trans                 &trans
+               &trans  &kp LC(P)     &kp PERCENT      &kp COLON  &trans  &trans            &trans  &trans  &trans                  &trans     &trans  &trans        &kp GRAVE      &kp MINUS        &kp PLUS  &kp EQUAL  &kp LC(N)                 &trans
+ &mt LEFT_SHIFT LC(P)     &trans       &kp COMMA     &kp PERIOD  &trans  &trans                            &trans                  &trans                     &kp EXCLAMATION         &trans          &trans     &trans     &trans  &mt RIGHT_SHIFT LC(N)
+               &trans     &trans          &trans         &trans  &trans                    &trans  &trans  &trans                  &trans  &kp LC(Y)  &trans                          &trans          &trans     &trans     &trans                 &trans
             >;
         };
 
