@@ -9,15 +9,15 @@
 # Clean up old firmware files and unzips new firmware
 read -n 1 -p "Unpack new firmware?"
 
-./clean_firmware && "Done"
+./clean_firmware && echo "Done"
 
 # Wait for keypress to flash left board
 read -n 1 -p "Flash left board?"
 
-./left && "Done"
+./left && echo "Done"
 
 # Wait for keypress to flash right board
 read -n 1 -p "Flash right board?"
 
-./right && "Done"
+./right && echo "Done"
 
