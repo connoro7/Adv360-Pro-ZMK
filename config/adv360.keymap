@@ -60,11 +60,11 @@
 
         layer_fn {
             bindings = <
-      &kp F1          &kp F2         &kp F3  &kp F4     &kp F5     &kp F6               &tog 1                                                                 &mo 3  &kp F7              &kp F8     &kp F9   &kp F10   &kp F11           &kp F12
- &macro_quit    &macro_write         &trans  &trans     &trans     &trans            &kp PG_UP                                                              &kp HOME  &trans          &macro_gpo     &trans    &trans    &trans  &macro_codesmith
-      &trans          &trans      &macro_ps  &trans  &macro_pf  &macro_gs            &kp PG_DN  &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans              &trans     &trans    &trans    &trans    &macro_kinesis
-  &kp LSHIFT          &trans         &trans  &trans     &trans     &trans                                 &kp ENTER                     &trans                        &trans  &macro_gpullo_grph     &trans    &trans    &kp UP        &kp RSHIFT
-      &trans  &mt LGUI GRAVE  &mt LCTRL ESC  &trans     &trans                       &macro_pv    &trans  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                    &kp LEFT  &kp RIGHT  &kp LEFT  &kp DOWN         &kp RIGHT
+      &kp F1          &kp F2         &kp F3  &kp F4     &kp F5     &kp F6               &tog 1                                                                 &mo 3  &kp F7              &kp F8     &kp F9   &kp F10   &kp F11              &kp F12
+ &macro_quit    &macro_write         &trans  &trans     &trans     &trans            &kp PG_UP                                                              &kp HOME  &trans          &macro_gpo     &trans    &trans    &trans  &macro_thisisunsafe
+      &trans          &trans      &macro_ps  &trans  &macro_pf  &macro_gs            &kp PG_DN  &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans              &trans     &trans    &trans    &trans               &trans
+  &kp LSHIFT          &trans         &trans  &trans     &trans     &trans                                 &kp ENTER                     &trans                        &trans  &macro_gpullo_grph     &trans    &trans    &kp UP           &kp RSHIFT
+      &trans  &mt LGUI GRAVE  &mt LCTRL ESC  &trans     &trans                       &macro_pv    &trans  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                    &kp LEFT  &kp RIGHT  &kp LEFT  &kp DOWN            &kp RIGHT
             >;
         };
 
