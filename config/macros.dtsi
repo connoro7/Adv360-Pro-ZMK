@@ -1,3 +1,45 @@
+macro_gofuncprevstart: macro_gofuncprevstart{
+compatible = "zmk,behavior-macro";
+label = "macro_gofuncprevstart";
+#binding-cells = <0>;
+bindings = <&kp LEFT_BRACKET>, <&kp M>;
+};
+macro_gofuncnextstart: macro_gofuncnextstart{
+compatible = "zmk,behavior-macro";
+label = "macro_gofuncnextstart";
+#binding-cells = <0>;
+bindings = <&kp RIGHT_BRACKET>, <&kp COMMA>;
+};
+macro_sd: macro_sd{
+compatible = "zmk,behavior-macro";
+label = "macro_sd";
+#binding-cells = <0>;
+bindings = <&kp SPACE>, <&kp S>, <&kp D>;
+};
+macro_sf: macro_sf{
+compatible = "zmk,behavior-macro";
+label = "macro_sf";
+#binding-cells = <0>;
+bindings = <&kp SPACE>, <&kp S>, <&kp G>;
+};
+macro_sg: macro_sg{
+compatible = "zmk,behavior-macro";
+label = "macro_sg";
+#binding-cells = <0>;
+bindings = <&kp SPACE>, <&kp S>, <&kp G>;
+};
+macro_prev_buffer: macro_prev_buffer{
+compatible = "zmk,behavior-macro";
+label = "macro_prev_buffer";
+#binding-cells = <0>;
+bindings = <&kp SPACE>, <&kp B>, <&kp B>;
+};
+macro_scqad: macro_scqad{
+compatible = "zmk,behavior-macro";
+label = "macro_scqad";
+#binding-cells = <0>;
+bindings = <&kp S>, <&kp C>, <&kp Q>, <&kp A>, <&kp D>;
+};
 macro_dbackticks: macro_dbackticks{
 compatible = "zmk,behavior-macro";
 label = "macro_dbackticks";
