@@ -1,3 +1,9 @@
+macro_scaleqe: macro_scaleqe{
+compatible = "zmk,behavior-macro";
+label = "macro_scaleqe";
+#binding-cells = <0>;
+bindings = <&kp S>, <&kp C>, <&kp A>, <&kp L>, <&kp E>, <&kp MINUS>, <&kp Q>, <&kp E>;
+};
 macro_tmuxprefix: macro_tmuxprefix{
 compatible = "zmk,behavior-macro";
 label = "macro_tmuxprefix";
