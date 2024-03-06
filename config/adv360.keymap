@@ -40,11 +40,11 @@
 
         default_layer {
             bindings = <
- &kp EQUAL          &kp N1         &kp N2    &kp N3     &kp N4  &kp N5               &tog 1                                                                                   &mo 3  &kp N6    &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-   &kp TAB           &kp Q          &kp W     &kp E      &kp R   &kp T            &kp PG_UP                                                                                &kp HOME   &kp Y     &kp U      &kp I     &kp O     &kp P   &kp BSLH
-   &kp TAB           &kp A          &kp S   &lt 5 D    &lt 4 F   &kp G            &kp PG_DN            &kp LGUI       &kp LALT                       &kp LALT   &kp LGUI    &kp END   &kp H     &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
- &kp LSHFT           &kp Z          &kp X     &kp C      &kp V   &kp B                                               &lt 6 ESC                    &lt 7 LC(B)                         &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-     &mo 2  &mt LGUI GRAVE  &mt LCTRL ESC  &kp LEFT  &kp RIGHT                     &kp BSPC  &mt LEFT_SHIFT DEL  &mt LCTRL ESC                  &mt RCTRL TAB  &kp ENTER  &kp SPACE          &kp DOWN     &kp UP  &kp LBKT  &kp RBKT      &mo 2
+ &kp EQUAL          &kp N1             &kp N2    &kp N3     &kp N4  &kp N5               &tog 1                                                                                   &mo 3  &kp N6    &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+   &kp TAB           &kp Q              &kp W     &kp E      &kp R   &kp T            &kp PG_UP                                                                                &kp HOME   &kp Y     &kp U      &kp I     &kp O     &kp P   &kp BSLH
+   &kp TAB           &kp A              &kp S   &lt 5 D    &lt 4 F   &kp G            &kp PG_DN            &kp LGUI       &kp LALT                       &kp LALT   &kp LGUI    &kp END   &kp H     &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+ &kp LSHFT           &kp Z              &kp X     &kp C      &kp V   &kp B                                             &lt 6 LC(B)                    &lt 7 LC(B)                         &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+     &mo 2  &mt LGUI GRAVE  &macro_tmuxvisual  &kp LEFT  &kp RIGHT                     &kp BSPC  &mt LEFT_SHIFT DEL  &mt LCTRL ESC                  &mt RCTRL TAB  &kp ENTER  &kp SPACE          &kp DOWN     &kp UP  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
 
@@ -60,11 +60,11 @@
 
         layer_fn {
             bindings = <
-      &kp F1          &kp F2         &kp F3     &kp F4     &kp F5              &kp F6               &tog 1                                                                 &mo 3                  &kp F7                  &kp F8     &kp F9   &kp F10       &kp F11              &kp F12
- &macro_quit    &macro_write         &trans     &trans  &macro_pf           &macro_gs            &kp PG_UP                                                              &kp HOME                  &trans              &macro_gpo     &trans    &trans  &macro_scqad  &macro_thisisunsafe
-      &trans          &trans      &macro_ps  &macro_sd  &macro_sf           &macro_sg            &kp PG_DN  &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &macro_gofuncprevstart  &macro_gofuncnextstart     &trans    &trans        &trans               &trans
-  &kp LSHIFT          &trans         &trans     &trans     &trans  &macro_prev_buffer                                 &kp ENTER                     &trans                                        &trans      &macro_gpullo_grph     &trans    &trans        &kp UP           &kp RSHIFT
-      &trans  &mt LGUI GRAVE  &mt LCTRL ESC     &trans     &trans                                &macro_pv    &trans  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                                        &kp LEFT  &kp RIGHT  &kp LEFT      &kp DOWN            &kp RIGHT
+      &kp F1          &kp F2         &kp F3     &kp F4     &kp F5              &kp F6               &tog 1                                                                          &mo 3                  &kp F7                  &kp F8     &kp F9   &kp F10       &kp F11              &kp F12
+ &macro_quit    &macro_write         &trans     &trans  &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME                  &trans              &macro_gpo     &trans    &trans  &macro_scqad  &macro_thisisunsafe
+      &trans          &trans      &macro_ps  &macro_sd  &macro_sf           &macro_sg            &kp PG_DN           &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &macro_gofuncprevstart  &macro_gofuncnextstart     &trans    &trans        &trans               &trans
+  &kp LSHIFT          &trans         &trans     &trans     &trans  &macro_prev_buffer                                          &kp ENTER                     &trans                                        &trans      &macro_gpullo_grph     &trans    &trans        &kp UP           &kp RSHIFT
+      &trans  &mt LGUI GRAVE  &mt LCTRL ESC     &trans     &trans                                &macro_pv  &macro_tmuxvisual  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                                        &kp LEFT  &kp RIGHT  &kp LEFT      &kp DOWN            &kp RIGHT
             >;
         };
 
@@ -80,11 +80,11 @@
 
         layer_punctuation {
             bindings = <
-                &to 0             &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans         &trans          &trans     &trans     &trans                 &trans
-               &trans  &macro_dbackticks  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                                                     &trans        &kp TILDE         &trans          &trans     &trans     &trans                 &trans
-               &trans          &kp LC(P)     &kp PERCENT      &kp COLON  &trans  &trans            &trans  &trans  &trans                  &trans     &trans  &trans        &kp GRAVE      &kp MINUS        &kp PLUS  &kp EQUAL  &kp LC(N)                 &trans
- &mt LEFT_SHIFT LC(P)             &trans       &kp COMMA     &kp PERIOD  &trans  &trans                            &trans                  &trans                     &kp EXCLAMATION  &kp BACKSLASH  &kp UNDERSCORE     &trans     &trans  &mt RIGHT_SHIFT LC(N)
-               &trans             &trans          &trans         &trans  &trans                    &trans  &trans  &trans                  &trans  &kp LC(Y)  &trans                          &trans          &trans     &trans     &trans                 &trans
+                &to 0             &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans         &trans          &trans     &trans      &trans                 &trans
+               &trans  &macro_dbackticks  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                                                     &trans        &kp TILDE         &trans          &trans     &trans      &trans                 &trans
+               &trans       &kp LC(DOWN)     &kp PERCENT      &kp COLON  &trans  &trans            &trans  &trans  &trans                  &trans     &trans  &trans        &kp GRAVE      &kp MINUS        &kp PLUS  &kp EQUAL  &kp LC(UP)                 &trans
+ &mt LEFT_SHIFT LC(P)             &trans       &kp COMMA     &kp PERIOD  &trans  &trans                            &trans                  &trans                     &kp EXCLAMATION  &kp BACKSLASH  &kp UNDERSCORE     &trans      &trans  &mt RIGHT_SHIFT LC(N)
+               &trans             &trans          &trans         &trans  &trans                    &trans  &trans  &trans                  &trans  &kp LC(Y)  &trans                          &trans          &trans     &trans      &trans                 &trans
             >;
         };
 
@@ -111,8 +111,8 @@
         layer_Numbers {
             bindings = <
  &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans        &trans        &trans        &trans        &trans  &trans  &trans
- &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &none  &trans
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5            &trans  &trans  &trans                  &trans  &trans  &trans        &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &none  &trans
+ &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5            &trans  &trans  &trans                  &trans  &trans  &trans        &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
  &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                            &trans                  &trans                        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans                      &trans        &trans        &trans  &trans  &trans
             >;
