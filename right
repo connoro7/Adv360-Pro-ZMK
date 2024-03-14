@@ -2,5 +2,14 @@
 
 # Flashes firmware onto board
 
-cp ./firmware/*-right.uf2 /Volumes/ADV360PRO
+
+OS=$(uname)
+
+if [ "$OS" = "Darwin" ]; then
+    cp ./firmware/*-right.uf2 /Volumes/ADV360PRO
+elif [ "$OS" = "Linux" ]; then
+    cp ./firmware/*-right.uf2 /media/$USER/ADV360PRO
+else
+    echo "Unsupported operating system: $OS"
+fi
 
