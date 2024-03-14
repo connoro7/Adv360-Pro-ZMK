@@ -2,5 +2,5 @@
 
 # Flashes firmware onto board
 
-cp ./firmware/right.uf2 /Volumes/ADV360PRO
+cp ./firmware/*-right.uf2 /Volumes/ADV360PRO
 
