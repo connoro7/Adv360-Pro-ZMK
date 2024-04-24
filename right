@@ -2,7 +2,6 @@
 
 # Flashes firmware onto board
 
-
 OS=$(uname)
 
 if [ "$OS" = "Darwin" ]; then
