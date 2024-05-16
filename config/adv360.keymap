@@ -100,11 +100,11 @@
 
         layer_media {
             bindings = <
-           &to 0      &trans    &trans     &trans    &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-          &trans      &trans    &trans  &kp LC(H)    &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &macro_devtools  &kp C_PREV  &kp C_RW   &kp C_PP  &kp C_FF  &kp C_NEXT            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-          &trans      &trans    &trans     &trans    &trans      &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-          &trans      &trans    &trans     &trans    &trans                        &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+           &to 0      &trans      &trans        &trans        &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &trans      &trans      &trans     &kp LC(H)        &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &macro_devtools  &kp C_PREV    &kp C_RW      &kp C_PP      &kp C_FF  &kp C_NEXT            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &trans      &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP      &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+          &trans      &trans      &trans        &trans        &trans                        &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
