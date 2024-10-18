@@ -12,8 +12,7 @@ if [ -f "./firmware/*.uf2" ]; then
 else
     if [ -f "./firmware.zip" ]; then
         echo "Unzipping firmware..."
-        unzip firmware.zip -d firmware
-        echo "Done"
+        unzip firmware.zip -d firmware && echo "Done" || echo "Could not unzip firmware, please perform manual unzip."
         rm firmware.zip
     fi
 fi
