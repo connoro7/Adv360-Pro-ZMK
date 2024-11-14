@@ -1,3 +1,15 @@
+macro_devtoolchromium: macro_devtoolchromium{
+compatible = "zmk,behavior-macro";
+label = "macro_devtoolchromium";
+#binding-cells = <0>;
+bindings = <&kp LC(LS(I))>;
+};
+macro_tmux_searchup: macro_tmux_searchup{
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_searchup";
+#binding-cells = <0>;
+bindings = <&kp LC(B)>, <&kp ENTER>, <&kp QUESTION>;
+};
 macro_noaw: macro_noaw{
 compatible = "zmk,behavior-macro";
 label = "macro_noaw";
