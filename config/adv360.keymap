@@ -70,11 +70,11 @@
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                   &trans   &none   &none   &none   &none  &bt BT_CLR   &none
-  &none         &none         &none         &none         &none         &none            &bootloader                                                              &bootloader   &none   &none   &none   &none       &none   &none
-  &none         &none         &none         &none         &none         &none                  &none       &none   &none                   &none       &none            &none   &none   &none   &none   &none       &none   &none
-  &none         &none         &none         &none         &none         &none                                      &none                   &none                                &none   &none   &none   &none       &none   &none
-  &none         &none         &none         &none         &none                           &bl BL_DEC  &bl BL_INC   &none                   &none  &bl BL_TOG  &rgb_ug RGB_TOG           &none   &none   &none       &none   &none
+      &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                   &trans   &none   &none   &none   &none  &bt BT_CLR   &none
+      &none         &none         &none         &none         &none         &none            &bootloader                                                              &bootloader   &none   &none   &none   &none       &none   &none
+      &none         &none         &none         &none         &none        &tog 8                  &none       &none   &none                   &none       &none            &none   &none   &none   &none   &none       &none   &none
+      &none         &none         &none         &none         &none         &none                                      &none                   &none                                &none   &none   &none   &none       &none   &none
+ &bt BT_CLR         &none         &none         &none         &none                           &bl BL_DEC  &bl BL_INC   &none                   &none  &bl BL_TOG  &rgb_ug RGB_TOG           &none   &none   &none       &none   &none
             >;
         };
 
@@ -115,6 +115,26 @@
  &trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                            &trans                  &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
  &trans  &kp NUMBER_0  &kp NUMBER_0        &trans        &trans                    &trans  &trans  &trans                  &trans  &trans  &trans                &trans        &trans  &kp NUMBER_0  &kp NUMBER_0  &trans
+            >;
+        };
+
+        layer_GamingMain {
+            bindings = <
+        &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5               &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans  &tog 1
+        &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+   &kp CAPSLOCK         &kp A         &kp S         &kp D         &kp F         &kp G               &trans  &lt 9 undefined     &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &kp LEFT_SHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B                                          &kp TAB                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+      &kp LCTRL      &kp LALT      &kp LCMD      &kp LEFT     &kp RIGHT                          &kp SPACE        &kp LCTRL  &kp LSHFT                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_GamingUpper {
+            bindings = <
+ &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans        &trans        &trans        &trans        &trans        &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
