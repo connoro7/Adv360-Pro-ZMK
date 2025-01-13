@@ -120,11 +120,11 @@
 
         layer_GamingMain {
             bindings = <
-        &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5               &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans  &tog 1
-        &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &trans                                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &kp CAPSLOCK         &kp A         &kp S         &kp D         &kp F         &kp G               &trans  &lt 9 undefined     &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &kp LEFT_SHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B                                          &kp TAB                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-      &kp LCTRL      &kp LALT      &kp LCMD      &kp LEFT     &kp RIGHT                          &kp SPACE        &kp LCTRL  &kp LSHFT                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+        &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &tog 1
+        &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+   &kp CAPSLOCK         &kp A         &kp S         &kp D         &kp F         &kp G               &trans      &mo 9     &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &kp LEFT_SHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B                                    &kp TAB                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+      &kp LCTRL      &kp LALT      &kp LCMD      &kp LEFT     &kp RIGHT                          &kp SPACE  &kp LCTRL  &kp LSHFT                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
