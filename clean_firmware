@@ -1,11 +1,34 @@
 #!/bin/bash
-
-# cf.sh
+# clean_firmware
 # Clean firmware (and unzips the new firmware, if it exists)
 
-echo "Cleaning up old firmware files..."
-rm -f ./firmware/*.uf2
-echo "Done"
+function confirm() {
+    local prompt="${1:-Are you sure?} [y/n]: "
+    local default_response="y"
+    local response
+    read -r -n 1 -p "${IYellow}$prompt${Color_Off}" response
+    echo
+    case "$response" in
+    [yY] | [yY][eE][sS]) ;;
+    [nN] | [nN][oO] | '')
+        echo "Aborting..."
+        return 1 2>/dev/null
+        ;;
+    *)
+        echo "Invalid input. Please enter y or n."
+        confirm "$prompt"
+        ;;
+    esac
+}
+
+if [ -f "./firmware/*.uf2" ]; then
+    echo "Removing old firmware files..."
+    rm -f ./firmware/*.uf2
+    echo "Done"
+else
+    echo "No old firmware files found."
+fi
+
 if [ -f "./firmware/*.uf2" ]; then
     echo "Could not clean up files, please perform manual cleanup."
     exit 1
@@ -13,6 +36,6 @@ else
     if [ -f "./firmware.zip" ]; then
         echo "Unzipping firmware..."
         unzip firmware.zip -d firmware && echo "Done" || echo "Could not unzip firmware, please perform manual unzip."
-        rm firmware.zip
+        confirm 'Delete zip file?' && rm firmware.zip
     fi
 fi

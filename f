@@ -1,23 +1,33 @@
 #!/bin/bash
 # Debug mode #!/bin/bash -x -v
 
-
 # f.sh
-# (f)lashes firmware onto Kinesis Adv360 Pro boards with a single key-press to step through each script
-# Start this script before setting either board into bootloader mode.
+# (f)lashes firmware onto Kinesis Adv360 Pro boards.
+
+function confirm() {
+    local prompt="${1:-Are you sure?} [y/n]: "
+    local default_response="y"
+    local response
+    read -r -n 1 -p "${IYellow}$prompt${Color_Off}" response
+    echo
+    case "$response" in
+    [yY] | [yY][eE][sS]) ;;
+    [nN] | [nN][oO] | '')
+        echo "Aborting..."
+        return 1 2>/dev/null
+        ;;
+    *)
+        echo "Invalid input. Please enter y or n."
+        confirm "$prompt"
+        ;;
+    esac
+}
 
 # Clean up old firmware files and unzips new firmware
-read -n 1 -p "Unpack new firmware?"
+confirm 'Unpack new firmware?' && ./clean_firmware && echo "Done" || echo "Skipped"
 
-./clean_firmware && echo "Done"
+# Wait for confirmation to flash left board
+confirm 'Flash left board?' && ./left && echo "Done" || echo "Skipped"
 
-# Wait for keypress to flash left board
-read -n 1 -p "Flash left board?"
-
-./left && echo "Done"
-
-# Wait for keypress to flash right board
-read -n 1 -p "Flash right board?"
-
-./right && echo "Done"
-
+# Wait for confirmation to flash right board
+confirm 'Flash right board?' && ./right && echo "Done" || echo "Skipped"
