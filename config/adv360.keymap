@@ -39,6 +39,19 @@
         bindings = <&kp SPACE>, <&kp MINUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    td_hcui: td_hcui {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&macro_thisisunsafe>, <&macro_adminadmin>;
+    };
+    td_mt: tap_dance_mod_tap {
+            // caps_word on single tap, Lshift on hold, CAPSLOCK on double tap
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LSHIFT &caps_word>, <&kp CAPSLOCK>;
+    };
   };
 
     keymap {
@@ -70,7 +83,7 @@
       &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                  &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
  &macro_quit  &macro_write  &macro_noaw                 &trans               &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME  &trans              &macro_gpo                  &trans    &trans    &macro_scqad    &macro_thisisunsafe
       &trans        &trans    &macro_ps              &macro_sd               &macro_sf           &macro_sg            &kp PG_DN           &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans  &macro_gofuncprevstart  &macro_gofuncnextstart    &trans  &macro_scaleqe      &macro_adminadmin
-  &kp LSHIFT        &trans       &trans                 &trans                  &trans  &macro_prev_buffer                                          &kp ENTER                     &trans                        &trans      &macro_gpullo_grph                  &trans    &trans          &kp UP   &macro_tmux_searchup
+  &kp LSHIFT        &trans       &trans                 &trans                &td_hcui  &macro_prev_buffer                                          &kp ENTER                     &trans                        &trans      &macro_gpullo_grph                  &trans    &trans          &kp UP   &macro_tmux_searchup
       &trans        &trans       &trans  &macro_browsertableft  &macro_browsertabright                                &macro_pv  &macro_tmuxvisual  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                        &kp LEFT               &kp RIGHT  &kp LEFT        &kp DOWN  &kp LG(LS(LA(LC(W))))
             >;
         };
