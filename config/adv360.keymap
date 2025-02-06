@@ -46,11 +46,11 @@
         bindings = <&macro_thisisunsafe>, <&macro_adminadmin>;
     };
     td_shift: td_shift {
-            // caps_word on single tap, Lshift on hold, CAPSLOCK on double tap
+            // capslock on single tap, Lshift on hold, capsword on double tap
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LSHIFT &caps_word>, <&kp CAPSLOCK>;
+            bindings = <&mt LSHIFT CAPSLOCK>, <&caps_word>;
     };
   };
 
