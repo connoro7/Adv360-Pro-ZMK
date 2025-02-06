@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ACTION=$1
+
+if [ $ACTION == "ui" ]; then
+    open "https://kinesiscorporation.github.io/Adv360-Pro-GUI/"
+fi
+
+if [ $ACTION == "actions" ]; then
+    open "https://github.com/connoro7/Adv360-Pro-ZMK/actions"
+fi
+
+if [ $ACTION == "gh" ]; then
+    open "https://github.com/connoro7/Adv360-Pro-ZMK"
+fi

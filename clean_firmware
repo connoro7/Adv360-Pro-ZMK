@@ -21,21 +21,30 @@ function confirm() {
     esac
 }
 
-if [ -f "./firmware/*.uf2" ]; then
-    echo "Removing old firmware files..."
-    rm -f ./firmware/*.uf2
-    echo "Done"
-else
-    echo "No old firmware files found."
+# # Remove any .uf2 files in firmware/
+# if [ -f "./firmware/*.uf2" ]; then
+#     echo "Removing old firmware files..."
+#     rm -f ./firmware/*.uf2
+#     echo "Done"
+# else
+#     echo "No old firmware files found."
+# fi
+#
+# # Verify firmware/ is empty of .uf2 files
+# if [ -f "./firmware/*.uf2" ]; then
+#     echo "Could not clean up files, please perform manual cleanup."
+#     exit 1
+# fi
+
+rm -rf ./firmware
+mkdir ./firmware
+
+# Unzip new firmware if found
+if [ -f "./firmware.zip" ]; then
+    echo "Unzipping firmware..."
+    unzip firmware.zip -d firmware && echo "Done" || echo "Could not unzip firmware, please perform manual unzip."
+    confirm 'Delete zip file?' && rm ./firmware.zip
 fi
 
-if [ -f "./firmware/*.uf2" ]; then
-    echo "Could not clean up files, please perform manual cleanup."
-    exit 1
-else
-    if [ -f "./firmware.zip" ]; then
-        echo "Unzipping firmware..."
-        unzip firmware.zip -d firmware && echo "Done" || echo "Could not unzip firmware, please perform manual unzip."
-        confirm 'Delete zip file?' && rm firmware.zip
-    fi
-fi
+echo './firmware/:'
+ls -1 ./firmware
