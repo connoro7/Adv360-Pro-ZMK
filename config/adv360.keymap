@@ -91,7 +91,7 @@
                &trans  &macro_dbackticks  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                                                     &trans        &kp TILDE         &trans          &trans     &trans      &trans                 &trans
                &trans       &kp LC(DOWN)     &kp PERCENT      &kp COLON  &trans  &trans            &trans  &trans  &trans                  &trans     &trans  &trans        &kp GRAVE      &kp MINUS        &kp PLUS  &kp EQUAL  &kp LC(UP)                 &trans
  &mt LEFT_SHIFT LC(P)             &trans       &kp COMMA     &kp PERIOD  &trans  &trans                            &trans                  &trans                     &kp EXCLAMATION  &kp BACKSLASH  &kp UNDERSCORE     &trans      &trans  &mt RIGHT_SHIFT LC(N)
-               &trans             &trans          &trans         &trans  &trans                    &trans  &trans  &trans                  &trans  &kp LC(Y)  &kp MINUS                       &trans          &trans     &trans      &trans                 &trans
+               &trans             &trans          &trans         &trans  &trans                    &trans  &trans  &trans                  &trans  &kp LC(Y)  &trans                          &trans          &trans     &trans      &trans                 &trans
             >;
         };
 
