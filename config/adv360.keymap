@@ -25,24 +25,24 @@
 
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
+        //label = "HOMEROW_MODS"; //deprecated
         #binding-cells = <2>;
         tapping-term-ms = <200>;
-        quick_tap_ms = <175>;
+        //quick_tap_ms = <175>;  //deprecated
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
     // mm_MU + mm_SMU = tap: space, shift+tap: hyphen, shift+ctrl+tap: underscore
     mm_MU: mm_MU {
         compatible = "zmk,behavior-mod-morph";
-        label = "mm_MU";
+        //label = "mm_MU"; //deprecated
         #binding-cells = <0>;
         bindings = <&kp MINUS>, <&kp UNDERSCORE>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
     mm_SMU: mm_SMU {
         compatible = "zmk,behavior-mod-morph";
-        label = "mm_SMU";
+        //label = "mm_SMU";  //deprecated
         #binding-cells = <0>;
         bindings = <&kp SPACE>, <&mm_MU>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
