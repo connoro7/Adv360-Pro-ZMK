@@ -5,7 +5,7 @@ compatible = "zmk,behavior-macro";
 bindings = <&kp LC(B)>, <&kp J>;
 };
 macro_tmux_pane_right: macro_tmux_pane_right{
-compatible = "zmk,behavior-/acro";
+compatible = "zmk,behavior-macro";
 //label = "macro_tmux_pane_right";
 #binding-cells = <0>;
 bindings = <&kp LC(B)>, <&kp L>;
