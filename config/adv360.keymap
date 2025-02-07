@@ -35,14 +35,12 @@
     // mm_MU + mm_SMU = tap: space, shift+tap: hyphen, shift+ctrl+tap: underscore
     mm_MU: mm_MU {
         compatible = "zmk,behavior-mod-morph";
-        //label = "mm_MU"; //deprecated
         #binding-cells = <0>;
         bindings = <&kp MINUS>, <&kp UNDERSCORE>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
     mm_SMU: mm_SMU {
         compatible = "zmk,behavior-mod-morph";
-        //label = "mm_SMU";  //deprecated
         #binding-cells = <0>;
         bindings = <&kp SPACE>, <&mm_MU>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -54,10 +52,10 @@
         bindings = <&macro_thisisunsafe>, <&macro_adminadmin>;
     };
     td_caps: td_caps {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <250>;
+        bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
     };
     td_quotes: td_quotes {
         compatible = "zmk,behavior-tap-dance";
@@ -86,7 +84,7 @@
     td_q_COLONq: td_q_COLONq {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <150>;
         bindings = <&kp Q>, <&macro_quit>;
     };
     td_home: td_home {
@@ -142,8 +140,8 @@
         layer_fn {
             bindings = <
       &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                  &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
- &macro_quit  &macro_write  &macro_noaw                 &trans               &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME  &trans              &macro_gpo                  &trans    &trans    &macro_scqad    &macro_thisisunsafe
-      &trans        &trans    &macro_ps              &macro_sd               &macro_sf           &macro_sg            &kp PG_DN           &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans  &macro_gofuncprevstart  &macro_gofuncnextstart    &trans  &macro_scaleqe      &macro_adminadmin
+ &macro_quit  &macro_write  &macro_noaw                 &trans               &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME  &trans              &macro_gpo                  &trans    &trans    &macro_scqad                 &trans
+      &trans        &trans    &macro_ps              &macro_sd               &macro_sf           &macro_sg            &kp PG_DN           &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans  &macro_gofuncprevstart  &macro_gofuncnextstart    &trans  &macro_scaleqe                 &trans
   &kp LSHIFT        &trans       &trans                 &trans                &td_hcui  &macro_prev_buffer                                          &kp ENTER                     &trans                        &trans      &macro_gpullo_grph                  &trans    &trans          &kp UP   &macro_tmux_searchup
       &trans        &trans       &trans  &macro_browsertableft  &macro_browsertabright                                &macro_pv  &macro_tmuxvisual  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                        &kp LEFT               &kp RIGHT  &kp LEFT        &kp DOWN  &kp LG(LS(LA(LC(W))))
             >;
