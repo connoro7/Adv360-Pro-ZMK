@@ -1,10 +1,10 @@
-macro_tmux_window_down: macro_tmux_pane_down{
+macro_tmux_pane_down: macro_tmux_pane_down{
 compatible = "zmk,behavior-macro";
-label = "macro_tmux_window_down";
+label = "macro_tmux_pane_down";
 #binding-cells = <0>;
 bindings = <&kp LC(B)>, <&kp J>;
 };
-macro_tmux_window_right: macro_tmux_pane_right{
+macro_tmux_pane_right: macro_tmux_pane_right{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux_pane_right";
 #binding-cells = <0>;

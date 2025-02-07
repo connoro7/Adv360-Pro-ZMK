@@ -111,7 +111,7 @@
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp PG_DN>, <&macro_SS>, <&macro_tmux_window_down>;
+        bindings = <&kp PG_DN>, <&macro_SS>, <&macro_tmux_pane_down>;
     };
   };
 
