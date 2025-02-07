@@ -32,11 +32,19 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
-    morph_SM: morph_SM {
+    // mm_MU + mm_SMU = tap: space, shift+tap: hyphen, shift+ctrl+tap: underscore
+    mm_MU: mm_MU {
         compatible = "zmk,behavior-mod-morph";
-        label = "morph_SM";
+        label = "mm_MU";
         #binding-cells = <0>;
-        bindings = <&kp SPACE>, <&kp MINUS>;
+        bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    mm_SMU: mm_SMU {
+        compatible = "zmk,behavior-mod-morph";
+        label = "mm_SMU";
+        #binding-cells = <0>;
+        bindings = <&kp SPACE>, <&mm_MU>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     td_hcui: td_hcui {
@@ -51,6 +59,60 @@
             tapping-term-ms = <250>;
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
     };
+    td_quotes: td_quotes {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp SQT>, <&kp DQT>;
+    };
+    td_ex_qs: td_ex_qs {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
+    };
+    td_c_LCc: td_c_LCc {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp C>, <&kp LC(C)>;
+    };
+    td_v_LCv: td_v_LCv {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp V>, <&kp LC(V)>;
+    };
+    td_q_COLONq: td_q_COLONq {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp Q>, <&macro_quit>;
+    };
+    td_home: td_home {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&kp HOME>, <&kp LC(A)>;
+    };
+    td_end: td_end {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&kp END>, <&kp LC(E)>;
+    };
+    td_pgup: td_pgup {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp PG_UP>, <&macro_ss>, <&macro_tmux_pane_right>;
+    };
+    td_pgdn: td_pgdn {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp PG_DN>, <&macro_SS>, <&macro_tmux_window_down>;
+    };
   };
 
     keymap {
@@ -60,8 +122,8 @@
         default_layer {
             bindings = <
  &kp EQUAL        &kp N1             &kp N2    &kp N3     &kp N4  &kp N5               &tog 1                                                                         &mo 3  &kp N6    &kp N7     &kp N8    &kp N9    &kp N0          &kp MINUS
-   &kp TAB         &kp Q              &kp W     &kp E      &kp R   &kp T            &kp PG_UP                                                                      &kp HOME   &kp Y     &kp U      &kp I     &kp O     &kp P           &kp BSLH
-   &kp TAB         &kp A              &kp S   &lt 5 D    &lt 4 F   &kp G            &kp PG_DN  &kp LGUI       &kp LALT                       &kp RALT   &kp LGUI    &kp END   &kp H     &kp J      &kp K     &kp L  &kp SEMI            &kp SQT
+   &kp TAB         &kp Q              &kp W     &kp E      &kp R   &kp T             &td_pgup                                                                      &td_home   &kp Y     &kp U      &kp I     &kp O     &kp P           &kp BSLH
+   &kp TAB         &kp A              &kp S   &lt 5 D    &lt 4 F   &kp G             &td_pgdn   &kp LGUI      &kp LALT                       &kp RALT   &kp LGUI    &td_end   &kp H     &kp J      &kp K     &kp L  &kp SEMI            &kp SQT
  &td_caps          &kp Z              &kp X     &kp C      &kp V   &kp B                                   &lt 6 LC(B)                    &lt 7 MINUS                         &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &macro_tmuxvisual
      &mo 2  &kp CAPSLOCK  &macro_tmuxvisual  &kp LEFT  &kp RIGHT                     &kp BSPC   &kp DEL  &mt LCTRL ESC                  &mt RCTRL TAB  &kp ENTER  &kp SPACE          &kp DOWN     &kp UP  &kp LBKT  &kp RBKT  &kp LS(LC(SPACE))
             >;
