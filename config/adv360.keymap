@@ -87,6 +87,12 @@
         tapping-term-ms = <150>;
         bindings = <&kp Q>, <&macro_quit>;
     };
+    td_qQ: td_qQ {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&macro_quit>, <&macro_loudquit>;
+    };
     td_home: td_home {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
@@ -110,6 +116,12 @@
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp PG_DN>;
+    };
+    td_devtools: td_devtools {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&macro_devtools>, <&macro_devtoolchromium>;
     };
   };
 
