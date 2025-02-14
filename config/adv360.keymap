@@ -215,16 +215,16 @@
         // 7
         layer_Numbers {
             bindings = <
- &td_devtools  &kp C_PREV  &kp C_RW      &kp C_PP      &kp C_FF  &kp C_NEXT        &trans                                                     &trans  &trans        &trans        &trans        &trans        &trans  &trans
- &trans        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOL_UP      &trans                                                     &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans
- &trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOL_DOWN    &trans  &kp LC(H)  &trans                  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
- &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_MUTE                           &trans                  &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
- &trans  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0                    &trans  &trans     &trans                  &trans  &trans  &trans                &trans        &trans  &kp NUMBER_0  &kp NUMBER_0  &trans
+ &td_devtool  &kp C_PREV      &kp C_RW      &kp C_PP      &kp C_FF  &kp C_NEXT        &trans                                                 &trans  &trans        &trans        &trans        &trans        &trans  &trans
+ &trans           &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOL_UP      &trans                                                  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans
+ &trans     &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOL_DOWN    &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
+ &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_MUTE                        &trans                  &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
+ &trans     &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0                    &trans  &trans  &trans                  &trans  &trans  &trans                &trans        &trans  &kp NUMBER_0  &kp NUMBER_0  &trans
             >;
         };
 
         // 8
-        /* layer_GamingMain {
+        layer_GamingMain {
             bindings = <
         &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &tog 1
         &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -232,10 +232,10 @@
  &kp LEFT_SHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B                                    &kp TAB                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
       &kp LCTRL      &kp LALT      &kp LCMD      &kp LEFT     &kp RIGHT                          &kp SPACE  &kp LCTRL  &kp LSHFT                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
-        }; */
+        };
 
         // 8
-        /* layer_GamingUpper {
+        layer_GamingUpper {
             bindings = <
  &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -243,7 +243,7 @@
  &trans        &trans        &trans        &trans        &trans        &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
-        }; */
+        };
 
     };
 };
