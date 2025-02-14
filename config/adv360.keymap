@@ -135,6 +135,7 @@
         compatible = "zmk,keymap";
 
 
+        // 0
         default_layer {
             bindings = <
  &kp EQUAL        &kp N1             &kp N2    &kp N3     &kp N4  &kp N5                &tog 1                                                                         &mo 3  &kp N6    &kp N7     &kp N8    &kp N9    &kp N0          &kp MINUS
@@ -145,6 +146,7 @@
             >;
         };
 
+        // 1
         layer_keypad {
             bindings = <
     &trans  &trans  &kp KP_NUMLOCK  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY                  &trans                                                                                        &mo 3  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
@@ -155,6 +157,7 @@
             >;
         };
 
+        // 2
         layer_fn {
             bindings = <
       &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                  &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
@@ -165,6 +168,7 @@
             >;
         };
 
+        // 3
         layer_mod {
             bindings = <
       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                   &trans   &none   &none   &none   &none  &bt BT_CLR   &none
@@ -175,6 +179,7 @@
             >;
         };
 
+        // 4
         layer_punctuation {
             bindings = <
                 &to 0             &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans         &trans          &trans     &trans      &trans                 &trans
@@ -185,6 +190,7 @@
             >;
         };
 
+        // 5
         layer_brackets {
             bindings = <
       &to 0  &trans  &trans  &trans           &trans               &trans                       &trans                                                  &trans  &trans                &trans                 &trans  &trans  &trans  &trans
@@ -195,6 +201,7 @@
             >;
         };
 
+        // 6
         layer_media {
             bindings = <
                   &to 0      &trans      &trans        &trans        &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -205,17 +212,19 @@
             >;
         };
 
+        // 7
         layer_Numbers {
             bindings = <
- &trans        &trans        &trans        &trans        &trans  &trans            &trans                                                  &trans  &trans        &trans        &trans        &trans        &trans  &trans
- &trans        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans            &trans                                                  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans
- &trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
- &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                            &trans                  &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
- &trans  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0                    &trans  &trans  &trans                  &trans  &trans  &trans                &trans        &trans  &kp NUMBER_0  &kp NUMBER_0  &trans
+ &td_devtools  &kp C_PREV  &kp C_RW      &kp C_PP      &kp C_FF  &kp C_NEXT        &trans                                                     &trans  &trans        &trans        &trans        &trans        &trans  &trans
+ &trans        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOL_UP      &trans                                                     &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans
+ &trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOL_DOWN    &trans  &kp LC(H)  &trans                  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
+ &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_MUTE                           &trans                  &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
+ &trans  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0                    &trans  &trans     &trans                  &trans  &trans  &trans                &trans        &trans  &kp NUMBER_0  &kp NUMBER_0  &trans
             >;
         };
 
-        layer_GamingMain {
+        // 8
+        /* layer_GamingMain {
             bindings = <
         &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &tog 1
         &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -223,9 +232,10 @@
  &kp LEFT_SHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B                                    &kp TAB                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
       &kp LCTRL      &kp LALT      &kp LCMD      &kp LEFT     &kp RIGHT                          &kp SPACE  &kp LCTRL  &kp LSHFT                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
-        };
+        }; */
 
-        layer_GamingUpper {
+        // 8
+        /* layer_GamingUpper {
             bindings = <
  &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -233,7 +243,7 @@
  &trans        &trans        &trans        &trans        &trans        &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
-        };
+        }; */
 
     };
 };
