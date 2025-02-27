@@ -1,15 +1,31 @@
 #!/bin/bash
 
+HELPDOC=$(
+    cat <<EOF
+Usage: goto [ui|(actions|repo)|gh]
+
+
+EOF
+)
+
+if [ $# -eq 0 ]; then
+    echo $HELPDOC
+    exit 0
+fi
+
 ACTION=$1
 
-if [ $ACTION == "ui" ]; then
+case $ACTION in
+"ui")
     open "https://kinesiscorporation.github.io/Adv360-Pro-GUI/"
-fi
-
-if [ $ACTION == "actions" ]; then
+    ;;
+"actions" | "repo")
     open "https://github.com/connoro7/Adv360-Pro-ZMK/actions"
-fi
-
-if [ $ACTION == "gh" ]; then
+    ;;
+"gh")
     open "https://github.com/connoro7/Adv360-Pro-ZMK"
-fi
+    ;;
+*)
+    echo $HELPDOC
+    ;;
+esac
