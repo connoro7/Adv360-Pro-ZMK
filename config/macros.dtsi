@@ -1,12 +1,7 @@
-macro_importexportA: macro_importexportA{
+macro_importexport: macro_importexport{
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
-bindings = <&kp Q>, <&kp A>, <&kp MINUS>, <&kp E>, <&kp X>, <&kp P>, <&kp O>, <&kp R>, <&kp T>, <&kp S>, <&kp PERIOD>, <&kp L>, <&kp A>, <&kp B>, <&kp PERIOD>, <&kp L>, <&kp O>, <&kp C>, <&kp A>, <&kp L>, <&kp TAB>, <&kp Q>, <&kp A>, <&kp S>, <&kp M>, <&kp B>, <&kp TAB>;
-};
-macro_importexportB: macro_importexportB{
-compatible = "zmk,behavior-macro";
-#binding-cells = <0>;
-bindings = <&kp L>, <&kp A>, <&kp B>, <&kp DOT>, <&kp L>, <&kp O>, <&kp C>, <&kp A>, <&kp L>, <&kp TAB>, <&kp SLASH>, <&kp E>, <&kp X>, <&kp P>, <&kp O>, <&kp R>, <&kp T>, <&kp S>, <&kp SLASH>;
+bindings = <&kp Q>, <&kp A>, <&kp MINUS>, <&kp E>, <&kp X>, <&kp P>, <&kp O>, <&kp R>, <&kp T>, <&kp S>, <&kp PERIOD>, <&kp L>, <&kp A>, <&kp B>, <&kp PERIOD>, <&kp L>, <&kp O>, <&kp C>, <&kp A>, <&kp L>, <&kp TAB>, <&kp Q>, <&kp A>, <&kp S>, <&kp M>, <&kp B>, <&kp TAB>, <&kp TAB>, <&kp L>, <&kp A>, <&kp B>, <&kp DOT>, <&kp L>, <&kp O>, <&kp C>, <&kp A>, <&kp L>, <&kp TAB>, <&kp SLASH>, <&kp E>, <&kp X>, <&kp P>, <&kp O>, <&kp R>, <&kp T>, <&kp S>, <&kp SLASH>, <&kp LS(TAB)>, <&kp LS(TAB)>;
 };
 macro_loudquit: macro_loudquit{
 compatible = "zmk,behavior-macro";
