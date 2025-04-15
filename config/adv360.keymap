@@ -96,8 +96,8 @@
     td_w_fmtw: td_w_fmtw {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
-        bindings = <&macro_write>, <&macro_noaw>;
+        tapping-term-ms = <350>;
+        bindings = <&macro_noaw>, <&macro_write>;
     };
     td_home: td_home {
         compatible = "zmk,behavior-tap-dance";
