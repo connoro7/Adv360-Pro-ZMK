@@ -32,17 +32,38 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
-    // mm_MU + mm_SMU = tap: space, shift+tap: hyphen, shift+ctrl+tap: underscore
+    /*
+    mm_MU: "modmap: minus underscore"
+    Default:    MINUS
+    +CTRL:      UNDERSCORE
+    */
     mm_MU: mm_MU {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp MINUS>, <&kp UNDERSCORE>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
+    /*
+    mm_SMU: "modmap: space minus underscore"
+    Default:    SPACE
+    +SHFT:      MINUS
+    +SHFT+CTRL: UNDERSCORE
+    */
     mm_SMU: mm_SMU {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp SPACE>, <&mm_MU>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    /*
+    mm_SM: "modmap: space minus"
+    Default:    SPACE
+    +SHIFT:     MINUS
+    */
+    mm_SM: mm_SM {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp SPACE>, <&kp MINUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     td_hcui: td_hcui {
@@ -141,16 +162,17 @@
         compatible = "zmk,keymap";
 
 
+        /* layer 0 */
         default_layer {
             bindings = <
- &kp EQUAL        &kp N1             &kp N2    &kp N3     &kp N4  &kp N5                &tog 1                                                                         &mo 3  &kp N6    &kp N7     &kp N8    &kp N9    &kp N0          &kp MINUS
-   &kp TAB         &kp Q              &kp W     &kp E      &kp R   &kp T             &kp PG_UP                                                                      &td_home  &kp Y     &kp U      &kp I     &kp O     &kp P           &kp BSLH
-   &kp TAB         &kp A              &kp S   &lt 5 D    &lt 4 F   &kp G             &kp PG_DN  &kp LGUI      &kp LALT                       &kp RALT   &kp LGUI    &td_end   &kp H     &kp J      &kp K     &kp L  &kp SEMI            &kp SQT
- &td_caps          &kp Z              &kp X     &kp C      &kp V   &kp B                                   &lt 7 LC(B)                    &lt 6 MINUS                         &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &macro_tmuxvisual
-     &mo 2  &kp CAPSLOCK  &macro_tmuxvisual  &kp LEFT  &kp RIGHT                     &kp BSPC   &kp DEL  &mt LCTRL ESC                  &mt RCTRL TAB  &kp ENTER  &kp SPACE          &kp DOWN     &kp UP  &kp LBKT  &kp RBKT  &kp LS(LC(SPACE))
+ &kp EQUAL        &kp N1             &kp N2    &kp N3     &kp N4  &kp N5     &tog 1                                                                       &mo 3  &kp N6    &kp N7     &kp N8   &kp N9      &kp N0          &kp MINUS
+   &kp TAB         &kp Q              &kp W     &kp E      &kp R   &kp T  &kp PG_UP                                                                    &td_home  &kp Y     &kp U      &kp I     &kp O       &kp P           &kp BSLH
+   &kp TAB         &kp A              &kp S   &lt 5 D    &lt 4 F   &kp G  &kp PG_DN  &kp LGUI       &kp LALT                      &kp RALT   &kp LGUI   &td_end  &kp H     &kp J      &kp K     &kp L  &lt 8 SEMI            &kp SQT
+  &td_caps         &kp Z              &kp X     &kp C      &kp V   &kp B                         &lt 7 LC(B)                   &lt 6 MINUS                       &kp N     &kp M  &kp COMMA   &kp DOT    &kp FSLH  &macro_tmuxvisual
+     &mo 2  &kp CAPSLOCK  &macro_tmuxvisual  &kp LEFT  &kp RIGHT           &kp BSPC   &kp DEL  &mt LCTRL ESC                 &mt RCTRL TAB  &kp ENTER    &mm_SM         &kp DOWN     &kp UP  &kp LBKT    &kp RBKT  &kp LS(LC(SPACE))
             >;
         };
-
+        /* layer 1 */
         layer_keypad {
             bindings = <
     &trans  &trans  &kp KP_NUMLOCK  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY                  &trans                                                                                        &mo 3  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
@@ -161,6 +183,7 @@
             >;
         };
 
+        /* layer 2 */
         layer_fn {
             bindings = <
       &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                  &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
@@ -171,16 +194,18 @@
             >;
         };
 
+        /* layer 3 */
         layer_mod {
             bindings = <
       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                    &trans   &none   &none   &none   &none       &none   &none
       &none         &none         &none         &none         &none         &none                  &none                                                                     &none   &none   &none   &none   &none       &none   &none
-      &none         &none         &none         &none         &none        &tog 8                  &none       &none   &bootloader             &bootloader  &none            &none   &none   &none   &none   &none       &none   &none
+      &none         &none         &none         &none         &none         &none                  &none       &none   &bootloader             &bootloader  &none            &none   &none   &none   &none   &none       &none   &none
       &none         &none         &none         &none         &none         &none                                      &none                   &none                                 &none   &none   &none   &none       &none   &none
  &bt BT_CLR         &none         &none         &none         &none                           &bl BL_DEC  &bl BL_INC   &none                   &none   &bl BL_TOG  &rgb_ug RGB_TOG           &none   &none   &none       &none   &none
             >;
         };
 
+        /* layer 4 */
         layer_punctuation {
             bindings = <
                 &to 0             &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans         &trans          &trans     &trans      &trans                 &trans
@@ -191,6 +216,7 @@
             >;
         };
 
+        /* layer 5 */
         layer_brackets {
             bindings = <
       &to 0  &trans  &trans  &trans           &trans               &trans                       &trans                                                  &trans  &trans                &trans                 &trans  &trans  &trans  &trans
@@ -201,6 +227,7 @@
             >;
         };
 
+        /* layer 6 */
         layer_media {
             bindings = <
                   &to 0      &trans      &trans        &trans        &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -211,6 +238,7 @@
             >;
         };
 
+        /* layer 7 */
         layer_Numbers {
             bindings = <
  &td_devtools  &kp C_PREV    &kp C_RW      &kp C_PP      &kp C_FF      &kp C_NEXT    &kp C_VOL_UP                                                  &trans  &trans        &trans        &trans        &trans        &trans  &trans
@@ -221,25 +249,15 @@
             >;
         };
 
-        layer_GamingMain {
+        /* layer 8 */
+        layer_ubuntu {
             bindings = <
-        &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &tog 1
-        &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T               &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &kp CAPSLOCK         &kp A         &kp S         &kp D         &kp F         &kp G               &trans      &mo 9     &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &kp LEFT_SHIFT         &kp Z         &kp X         &kp C         &kp V         &kp B                                    &kp TAB                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-      &kp LCTRL      &kp LALT      &kp LCMD      &kp LEFT     &kp RIGHT                          &kp SPACE  &kp LCTRL  &kp LSHFT                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &trans    &trans   &trans  &trans   &trans   &trans
+ &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &LG(N1)  &LG(N2)  &LG(N3)  &LG(N4)  &LG(N5)  &trans
+ &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &LG(N6)  &LG(N7)  &LG(N8)  &LG(N9)  &trans   &trans
+ &trans        &trans        &trans        &trans        &trans        &trans                            &trans                  &trans                  &trans    &trans   &trans  &trans   &trans   &trans
+ &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans            &trans   &trans  &trans   &trans   &trans
             >;
         };
-
-        layer_GamingUpper {
-            bindings = <
- &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans        &trans        &trans        &trans        &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
     };
 };
