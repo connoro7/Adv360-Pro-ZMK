@@ -192,11 +192,11 @@
         /* layer 2 */
         layer_fn {
             bindings = <
-      &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                  &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
-      &td_qQ    &td_w_fmtw       &trans                 &trans               &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME  &trans              &macro_gpo                  &trans    &trans    &macro_scqad                 &trans
-      &trans        &trans    &macro_ps              &macro_sd               &macro_sf           &macro_sg            &kp PG_DN           &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans  &macro_gofuncprevstart  &macro_gofuncnextstart    &trans  &macro_scaleqe                 &trans
-  &kp LSHIFT        &trans       &trans       &td_importexport                &td_hcui  &macro_prev_buffer                                          &kp ENTER                     &trans                        &trans      &macro_gpullo_grph                  &trans    &trans          &kp UP   &macro_tmux_searchup
-      &trans        &trans       &trans  &macro_browsertableft  &macro_browsertabright                                &macro_pv  &macro_tmuxvisual  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                        &kp LEFT               &kp RIGHT  &kp LEFT        &kp DOWN  &kp LG(LS(LA(LC(W))))
+      &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                          &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
+      &td_qQ    &td_w_fmtw       &trans                 &trans               &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME  &trans                      &macro_gpo                  &trans    &trans    &macro_scqad                 &trans
+      &trans        &trans    &macro_ps              &macro_sd               &macro_sf           &macro_sg            &kp PG_DN           &kp LGUI   &kp LALT                   &kp LALT   &kp RGUI    &kp END  &trans          &macro_gofuncprevstart  &macro_gofuncnextstart    &trans  &macro_scaleqe                 &trans
+  &kp LSHIFT        &trans       &trans       &td_importexport                &td_hcui  &macro_prev_buffer                                          &kp ENTER                     &trans                        &macro_gpullu_grph  &macro_gpullo_grph                  &trans    &trans          &kp UP   &macro_tmux_searchup
+      &trans        &trans       &trans  &macro_browsertableft  &macro_browsertabright                                &macro_pv  &macro_tmuxvisual  &kp SPACE                  &kp RCTRL  &kp ENTER  &kp SPACE                                &kp LEFT               &kp RIGHT  &kp LEFT        &kp DOWN  &kp LG(LS(LA(LC(W))))
             >;
         };
 
