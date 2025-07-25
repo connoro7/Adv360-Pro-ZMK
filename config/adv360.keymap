@@ -59,7 +59,7 @@ the max speed depends on the value of ZMK_POINTING_DEFAULT_SCRL_VAL.
 Should you wish to override the default movement or scrolling max velocities,
 you must define the defaults BEFORE including the header
 */
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1100  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
