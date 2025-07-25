@@ -162,43 +162,35 @@
         tapping-term-ms = <200>;
         bindings = <&macro_importexport>;
     };
-    extra1 { 
-      display-name = "Red";    
-      status = "reserved";
-    };
-
-    extra2 { 
-      display-name = "Purple";    
-      status = "reserved";
-    };
-
-    extra3 { 
-      display-name = "Cyan";    
-      status = "reserved";
-    };
-
-    extra4 { 
-      display-name = "Yellow";    
-      status = "reserved";
-    };
   };
 
     keymap {
         compatible = "zmk,keymap";
-
+        /*
+        TEMPLATE
+        bindings = <
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        >;
+        */
 
         /* layer 0 */
-        default_layer {
+        default {
+            display-name = "Base";
             bindings = <
- &kp EQUAL        &kp N1             &kp N2    &kp N3     &kp N4  &kp N5     &tog 1                                                                       &mo 3  &kp N6    &kp N7     &kp N8   &kp N9      &kp N0          &kp MINUS
-   &kp TAB         &kp Q              &kp W     &kp E      &kp R   &kp T  &kp PG_UP                                                                    &td_home  &kp Y     &kp U      &kp I     &kp O       &kp P           &kp BSLH
-   &kp TAB         &kp A              &kp S   &lt 5 D    &lt 4 F   &kp G  &kp PG_DN  &kp LGUI       &kp LALT                      &kp RALT   &kp LGUI   &td_end  &kp H     &kp J      &kp K     &kp L  &lt 8 SEMI            &kp SQT
- &kp LSHFT         &kp Z              &kp X     &kp C      &kp V   &kp B                         &lt 7 LC(B)                   &lt 6 MINUS                       &kp N     &kp M  &kp COMMA   &kp DOT    &kp FSLH  &macro_tmuxvisual
-     &mo 2  &kp CAPSLOCK  &macro_tmuxvisual  &kp LEFT  &kp RIGHT           &kp BSPC   &kp DEL  &mt LCTRL ESC                 &mt RCTRL TAB  &kp ENTER    &td_SM         &kp DOWN     &kp UP  &kp LBKT    &kp RBKT  &kp LS(LC(SPACE))
+ &kp EQUAL  &kp N1        &kp N2            &kp N3    &kp N4    &kp N5  &tog 1                                                     &mo 3    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
+ &kp TAB    &kp Q         &kp W             &kp E     &kp R     &kp T   &kp PG_UP                                                  &td_home &kp Y     &kp U      &kp I      &kp O      &kp P      &kp BSLH
+ &kp TAB    &kp A         &kp S             &lt 5 D   &lt 4 F   &kp G   &kp PG_DN       &kp LGUI &kp LALT  &kp RALT &kp LGUI       &td_end  &kp H     &kp J      &kp K      &kp L      &lt 8 SEMI &kp SQT
+ &kp LSHFT  &kp Z         &kp X             &kp C     &kp V     &kp B                         &lt 7 LC(B)  &lt 6 MINUS                      &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH   &macro_tmuxvisual
+ &mo 2      &kp CAPSLOCK  &macro_tmuxvisual &kp LEFT  &kp RIGHT           &kp BSPC &kp DEL  &mt LCTRL ESC  &mt RCTRL TAB &kp ENTER &td_SM             &kp DOWN   &kp UP     &kp LBKT   &kp RBKT   &kp LS(LC(SPACE))
             >;
         };
         /* layer 1 */
-        layer_keypad {
+        keypad {
+            display-name = "Kp";
             bindings = <
     &trans  &trans  &kp KP_NUMLOCK  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY                  &trans                                                                                        &mo 3  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
     &trans  &trans          &kp N7        &kp N8        &kp N9     &kp KP_MINUS                   &none                                                                                       &trans  &trans   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS   &kp BSLH
@@ -209,7 +201,8 @@
         };
 
         /* layer 2 */
-        layer_fn {
+        fn {
+            display-name = "Fn";
             bindings = <
       &kp F1        &kp F2       &kp F3                 &kp F4                  &kp F5              &kp F6               &tog 1                                                                          &mo 3  &kp F7                          &kp F8                  &kp F9   &kp F10         &kp F11                &kp F12
       &td_qQ    &td_w_fmtw       &trans                 &trans               &macro_pf           &macro_gs            &kp PG_UP                                                                       &kp HOME  &trans                      &macro_gpo                  &trans    &trans    &macro_scqad                 &trans
@@ -220,7 +213,7 @@
         };
 
         /* layer 3 */
-        layer_mod {
+        mod {
             bindings = <
       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                    &trans   &none   &none   &none   &none       &none   &none
       &none         &none         &none         &none         &none         &none                  &none                                                                     &none   &none   &none   &none   &none       &none   &none
@@ -231,7 +224,7 @@
         };
 
         /* layer 4 */
-        layer_punctuation {
+        punctuation {
             bindings = <
                 &to 0             &trans          &trans         &trans  &trans  &trans            &trans                                                     &trans           &trans         &trans          &trans     &trans      &trans                 &trans
                &trans  &macro_dbackticks  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                                                     &trans        &kp TILDE         &trans          &trans     &trans      &trans                 &trans
@@ -242,7 +235,7 @@
         };
 
         /* layer 5 */
-        layer_brackets {
+        brackets {
             bindings = <
       &to 0  &trans  &trans  &trans           &trans               &trans                       &trans                                                  &trans  &trans                &trans                 &trans  &trans  &trans  &trans
      &trans  &trans  &trans  &trans     &macro_arrow  &macro_double_arrow              &macro_arrow_fn                                                  &trans  &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE  &trans  &trans  &trans
@@ -253,7 +246,7 @@
         };
 
         /* layer 6 */
-        layer_media {
+        media {
             bindings = <
           &to 0      &trans      &trans        &trans        &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
          &trans      &trans      &trans     &kp LC(H)        &trans      &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -264,7 +257,7 @@
         };
 
         /* layer 7 */
-        layer_Numbers {
+        numbers {
             bindings = <
  &td_devtools  &kp C_PREV    &kp C_RW      &kp C_PP      &kp C_FF      &kp C_NEXT    &kp C_VOL_UP                                                  &trans  &trans        &trans        &trans        &trans        &trans  &trans
  &trans        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MINUS  &kp C_VOL_DN                                                  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans
@@ -275,7 +268,7 @@
         };
 
         /* layer 8 */
-        layer_ubuntu {
+        ubuntu {
             bindings = <
  &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans      &trans      &trans      &trans      &trans      &trans  &trans
  &trans        &trans        &trans        &trans        &trans        &trans            &trans                                                  &trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)  &trans
@@ -283,6 +276,30 @@
  &trans        &trans        &trans        &trans        &trans        &trans                            &trans                  &trans                      &trans      &trans      &trans      &trans      &trans  &trans
  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans                  &trans  &trans  &trans                  &trans      &trans      &trans      &trans  &trans
             >;
+        };
+
+        /* layer 9 */
+        extra1 {
+          display-name = "Red";
+          status = "reserved";
+        };
+
+        /* layer 10 */
+        extra2 {
+          display-name = "Purple";
+          status = "reserved";
+        };
+
+        /* layer 11 */
+        extra3 {
+          display-name = "Cyan";
+          status = "reserved";
+        };
+
+        /* layer 12 */
+        extra4 {
+          display-name = "Yellow";
+          status = "reserved";
         };
     };
 };
