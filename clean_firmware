@@ -36,14 +36,19 @@ function confirm() {
 #     exit 1
 # fi
 
-rm -rf ./firmware
-mkdir ./firmware
+confirm 'Remove old firmware?' && rm -rf ./firmware
+
+mkdir -p ./firmware
+
+# FIRMWARE_NAME="firmware"
+# FIRMWARE_NAME="firmware-clique"
+FIRMWARE_NAME="firmware-no-clique"
 
 # Unzip new firmware if found
-if [ -f "./firmware.zip" ]; then
+if [ -f "./$FIRMWARE_NAME.zip" ]; then
     echo "Unzipping firmware..."
-    unzip firmware.zip -d firmware && echo "Done" || echo "Could not unzip firmware, please perform manual unzip."
-    confirm 'Delete zip file?' && rm ./firmware.zip
+    unzip $FIRMWARE_NAME.zip -d firmware && echo "Done" || echo "Could not unzip firmware, please perform manual unzip."
+    confirm 'Delete zip file?' && rm ./$FIRMWARE_NAME.zip
 fi
 
 echo './firmware/:'
