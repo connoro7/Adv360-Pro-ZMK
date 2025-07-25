@@ -2,14 +2,14 @@
 
 # Get the date, first 4 chars of branch name and short commit hash
 date=$(date -u +"%Y%m%d")
-branch=${1:-$(git rev-parse --abbrev-ref HEAD | cut -c1-4)}
-commit=${2:-$(git rev-parse --short HEAD)}
-clique=${3:-"."}
+branch=$(git rev-parse --abbrev-ref HEAD | cut -c1-4)
+commit=$(git rev-parse --short HEAD)
+clique=${1:-"."}
 
 uppercase_char() {
     local char=$1
 
-    (echo $char | tr '[a-z]' '[A-Z]' 2>/dev/null) || echo "${char^^}"
+    (echo $char | tr '[a-z]' '[A-Z]' 2> /dev/null) || echo "${char^^}"
 }
 
 # Function to transform characters to ZMK key behaviours
