@@ -231,7 +231,7 @@ you must define the defaults BEFORE including the header
  &kp TAB    &kp Q         &kp W             &kp E     &kp R     &kp T   &kp PG_UP                        /**/                        &td_home &kp Y     &kp U      &kp I      &kp O      &kp P      &kp BSLH
  &kp TAB    &kp A         &kp S             &lt 5 D   &lt 4 F   &kp G   &kp PG_DN       &kp LGUI &kp LALT/**/&kp RALT &kp LGUI       &td_end  &kp H     &kp J      &kp K      &kp L      &lt 8 SEMI &kp SQT
  &kp LSHFT  &kp Z         &kp X             &kp C     &kp V     &kp B                         &lt 7 LC(B)/**/&lt 6 MINUS                      &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH   &macro_tmuxvisual
- &mo 2      &kp CAPSLOCK  &macro_tmuxvisual &kp LEFT  &kp RIGHT           &kp BSPC &kp DEL  &mt LCTRL ESC/**/&mt RCTRL TAB &kp ENTER &td_SM             &kp DOWN   &kp UP     &kp LBKT   &kp RBKT   &kp LS(LC(SPACE))
+ &mo 2      &kp CAPSLOCK  &macro_tmuxvisual &kp LEFT  &kp RIGHT           &kp BSPC &kp DEL  &mt LCTRL ESC/**/&mt RCTRL TAB &kp ENTER &kp SPACE          &kp DOWN   &kp UP     &kp LBKT   &kp RBKT   &kp LS(LC(SPACE))
             >;
         };
         /* layer 1 */
