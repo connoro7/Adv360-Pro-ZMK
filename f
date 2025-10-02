@@ -24,7 +24,7 @@ function confirm() {
 }
 
 # Clean up old firmware files and unzips new firmware
-confirm 'Unpack new firmware?' && ./clean_firmware && echo "Done" || echo "Skipped"
+./clean_firmware && echo "Done" || echo "Skipped"
 
 # Wait for confirmation to flash left board
 confirm 'Flash left board?' && ./left && echo "Done" || echo "Skipped"

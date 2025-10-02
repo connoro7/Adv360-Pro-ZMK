@@ -112,96 +112,209 @@ you must define the defaults BEFORE including the header
         bindings = <&kp SPACE>, <&kp MINUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    /*
+    mm_Space_CSMinus: "modmap: space minus"
+    Default:    SPACE
+    +SHFT+CTRL: MINUS
+    Uses nested mod-morph: checks CTRL first, then SHIFT
+    */
+    mm_Space_CSMinus_inner: mm_Space_CSMinus_inner {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp SPACE>, <&kp MINUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    mm_SCSM: mm_Space_CSMinus {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp SPACE>, <&mm_Space_CSMinus_inner>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    /*
+    td_SM: "tap dance: space minus"
+    Single tap:    SPACE
+    Double tap:    MINUS
+    Tapping term: 135ms (my average time between a quick doubletap, but it goes as high as 135ms)
+    */
     td_SM: td_SM {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <135>; // 120ms seems to be my average time between a quick doubletap, but it goes as high as 135ms
         bindings = <&kp SPACE>, <&kp MINUS>;
     };
+    /*
+    td_HCUI: "tap dance: thisisunsafe adminadmin"
+    Single tap:    thisisunsafe
+    Double tap:    adminadmin
+    Tapping term: 200ms
+    */
     td_hcui: td_hcui {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&macro_thisisunsafe>, <&macro_adminadmin>;
     };
+    /*
+    td_CAPS: "tap dance: left shift / caps lock"
+    Single tap:    Left Shift
+    Double tap:    Caps Lock
+    Tapping term: 250ms
+    */
     td_caps: td_caps {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <250>;
         bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
     };
+    /*
+    td_DQT: "tap dance: double quote / single quote"
+    Single tap:    '
+    Double tap:    "
+    Tapping term: 200ms
+    */
     td_quotes: td_quotes {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp SQT>, <&kp DQT>;
     };
+    /*
+    td_EX_QS: "tap dance: exclamation / question"
+    Single tap:    !
+    Double tap:    ?
+    Tapping term: 200ms
+    */
     td_ex_qs: td_ex_qs {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
     };
+    /*
+    td_C_LCc: "tap dance: C / Ctrl-C"
+    Single tap:    C
+    Double tap:    Ctrl-C
+    Tapping term: 200ms
+    */
     td_c_LCc: td_c_LCc {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp C>, <&kp LC(C)>;
     };
+    /*
+    td_V_LCv: "tap dance: V / Ctrl-V"
+    Single tap:    V
+    Double tap:    Ctrl-V
+    Tapping term: 200ms
+    */
     td_v_LCv: td_v_LCv {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp V>, <&kp LC(V)>;
     };
+    /*
+    td_Q_COLONq: "tap dance: Q / : / quit"
+    Single tap:    Q
+    Double tap:    :
+    Triple tap:    quit
+    Tapping term: 150ms
+    */
     td_q_COLONq: td_q_COLONq {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&kp Q>, <&macro_quit>;
     };
+    /*
+    td_Q_Q: "tap dance: Q / Q / quit / loudquit"
+    Single tap:    Q
+    Double tap:    Q
+    Triple tap:    quit
+    Quadruple tap: loudquit
+    Tapping term: 150ms
+    */
     td_qQ: td_qQ {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&macro_quit>, <&macro_loudquit>;
     };
+    /*
+    td_W_FMTW: "tap dance: W / FmtW"
+    Single tap:    W
+    Double tap:     (reformat code in VSCode)
+    Tapping term: 350ms
+    */
     td_w_fmtw: td_w_fmtw {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <350>;
         bindings = <&macro_noaw>, <&macro_write>;
     };
+    /*
+    td_HOME: "tap dance: HOME / Ctrl-A"
+    Single tap:    HOME
+    Double tap:    Ctrl-A
+    Tapping term: 150ms
+    */
     td_home: td_home {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&kp HOME>, <&kp LC(A)>;
     };
+    /*
+    td_END: "tap dance: END / Ctrl-E"
+    Single tap:    END
+    Double tap:    Ctrl-E
+    Tapping term: 150ms
+    */
     td_end: td_end {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&kp END>, <&kp LC(E)>;
     };
+    /*
+    td_PGUP: "tap dance: PAGE UP"
+    Single tap:    PAGE UP
+    */
     td_pgup: td_pgup {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp PG_UP>;
     };
+    /*
+    td_PGDN: "tap dance: PAGE DOWN"
+    Single tap:    PAGE DOWN
+    */
     td_pgdn: td_pgdn {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp PG_DN>;
     };
+    /*
+    td_DEVTOOLS: "tap dance: devtools / chromium devtools"
+    Single tap:    devtools (F12)
+    Double tap:    chromium devtools (Ctrl-Shift-I)
+    Tapping term: 200ms
+    */
     td_devtools: td_devtools {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&macro_devtools>, <&macro_devtoolchromium>;
     };
+    /*
+    td_IMPORTEXPORT: "tap dance: importexport / source / header"
+    Single tap:    importexport (Ctrl-Shift-I)
+    Double tap:    source/header (Ctrl-Shift-H)
+    Tapping term: 200ms
+    */
     td_importexport: td_importexport {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
@@ -227,11 +340,11 @@ you must define the defaults BEFORE including the header
         default {
             display-name = "Base";
             bindings = <
- &kp EQUAL  &kp N1        &kp N2            &kp N3    &kp N4    &kp N5  &tog 1                           /**/                        &mo 3    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
- &kp TAB    &kp Q         &kp W             &kp E     &kp R     &kp T   &kp PG_UP                        /**/                        &td_home &kp Y     &kp U      &kp I      &kp O      &kp P      &kp BSLH
- &kp TAB    &kp A         &kp S             &lt 5 D   &lt 4 F   &kp G   &kp PG_DN       &kp LGUI &kp LALT/**/&kp RALT &kp LGUI       &td_end  &kp H     &kp J      &kp K      &kp L      &lt 8 SEMI &kp SQT
- &kp LSHFT  &kp Z         &kp X             &kp C     &kp V     &kp B                         &lt 7 LC(B)/**/&lt 6 MINUS                      &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH   &macro_tmuxvisual
- &mo 2      &kp CAPSLOCK  &macro_tmuxvisual &kp LEFT  &kp RIGHT           &kp BSPC &kp DEL  &mt LCTRL ESC/**/&mt RCTRL TAB &kp ENTER &kp SPACE          &kp DOWN   &kp UP     &kp LBKT   &kp RBKT   &kp LS(LC(SPACE))
+  &kp EQUAL  &kp N1        &kp N2            &kp N3    &kp N4    &kp N5  &tog 1                           /**/                        &mo 3    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
+  &kp TAB    &kp Q         &kp W             &kp E     &kp R     &kp T   &kp PG_UP                        /**/                        &td_home &kp Y     &kp U      &kp I      &kp O      &kp P      &kp BSLH
+  &kp TAB    &kp A         &kp S             &lt 5 D   &lt 4 F   &kp G   &kp PG_DN       &kp LGUI &kp LALT/**/&kp RALT &kp LGUI       &td_end  &kp H     &kp J      &kp K      &kp L      &lt 8 SEMI &kp SQT
+  &kp LSHFT  &kp Z         &kp X             &kp C     &kp V     &kp B                         &lt 7 LC(B)/**/&lt 6 MINUS                      &kp N     &kp M      &kp COMMA  &kp DOT    &kp FSLH   &macro_tmuxvisual
+  &mo 2      &kp CAPSLOCK  &macro_tmuxvisual &kp LEFT  &kp RIGHT           &kp BSPC &kp DEL  &mt LCTRL ESC/**/&mt RCTRL TAB &kp ENTER &mm_SCSM           &kp DOWN   &kp UP     &kp LBKT   &kp RBKT   &kp LS(LC(SPACE))
             >;
         };
         /* layer 1 */
