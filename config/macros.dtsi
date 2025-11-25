@@ -94,6 +94,11 @@ compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
 bindings = <&kp GRAVE>, <&kp GRAVE>, <&kp LEFT>;
 };
+macro_tbackticks: macro_tbackticks{
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings = <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp ENTER>;
+};
 macro_thisisunsafe: macro_thisisunsafe{
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;

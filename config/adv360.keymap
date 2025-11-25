@@ -180,6 +180,18 @@ you must define the defaults BEFORE including the header
         bindings = <&kp SQT>, <&kp DQT>;
     };
     /*
+    td_backticks: "tap dance: double backticks / triple backticks"
+    Single tap:    ``
+    Double tap:    ```\n```
+    Tapping term: 200ms
+    */
+    td_backticks: td_backticks {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&macro_dbackticks>, <&macro_tbackticks>;
+    };
+    /*
     td_EX_QS: "tap dance: exclamation / question"
     Single tap:    !
     Double tap:    ?
@@ -387,7 +399,7 @@ you must define the defaults BEFORE including the header
         punctuation {
             bindings = <
                 &to 0             &trans          &trans         &trans  &trans  &trans            &trans                /**/                   &trans           &trans         &trans          &trans     &trans      &trans                 &trans
-               &trans  &macro_dbackticks  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                /**/                   &trans        &kp TILDE         &trans          &trans     &trans      &trans                 &trans
+               &trans      &td_backticks  &macro_dquotes  &macro_quotes  &trans  &trans            &trans                /**/                   &trans        &kp TILDE         &trans          &trans     &trans      &trans                 &trans
                &trans       &kp LC(DOWN)     &kp PERCENT      &kp COLON  &trans  &trans            &trans  &trans  &trans/**/&trans     &trans  &trans        &kp GRAVE      &kp MINUS        &kp PLUS  &kp EQUAL  &kp LC(UP)                 &trans
  &mt LEFT_SHIFT LC(P)             &trans       &kp COMMA     &kp PERIOD  &trans  &trans                            &trans/**/&trans                     &kp EXCLAMATION  &kp BACKSLASH  &kp UNDERSCORE     &trans      &trans  &mt RIGHT_SHIFT LC(N)
                &trans             &trans          &trans         &trans  &trans                    &trans  &trans  &trans/**/&trans  &kp LC(Y)  &trans                          &trans          &trans     &trans      &trans                 &trans
