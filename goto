@@ -10,6 +10,7 @@ EOF
 
 if [ $# -eq 0 ]; then
     echo $HELPDOC
+    open "https://github.com/connoro7/Adv360-Pro-ZMK/actions"
     exit 0
 fi
 
@@ -19,7 +20,7 @@ case $ACTION in
 "ui")
     open "https://kinesiscorporation.github.io/Adv360-Pro-GUI/"
     ;;
-"actions" | "repo")
+"actions" | "repo" | "r")
     open "https://github.com/connoro7/Adv360-Pro-ZMK/actions"
     ;;
 "gh")
