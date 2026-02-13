@@ -204,6 +204,11 @@ compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
 bindings = <&kp LC(C)>, <&kp COLON>, <&kp W>, <&kp ENTER>;
 };
+macro_writeall: macro_writeall{
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings = <&kp LC(C)>, <&kp COLON>, <&kp W>, <&kp A>, <&kp ENTER>;
+};
 macro_wq: macro_wq{
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;

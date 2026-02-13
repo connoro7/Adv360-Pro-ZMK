@@ -263,7 +263,7 @@ you must define the defaults BEFORE including the header
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <300>;
-        bindings = <&macro_noaw>, <&macro_write>;
+        bindings = <&macro_noaw>, <&macro_write>, <&macro_writeall>;
     };
 
     /*
