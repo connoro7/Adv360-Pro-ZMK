@@ -241,32 +241,16 @@ you must define the defaults BEFORE including the header
     };
 
     /*
-    td_Q_COLONq: "tap dance: Q / : / quit"
-    Single tap:    Q
-    Double tap:    :
-    Triple tap:    quit
-    Tapping term: 150ms
+    td_q_Q_QA: "tap dance: q / quit / quit all"
+    Single tap:    :q
+    Double tap:    :q!
+    Triple tap:    :qa!
     */
-    td_q_COLONq: td_q_COLONq {
+    td_q_Q_QA: td_q_Q_QA {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
-        bindings = <&kp Q>, <&macro_quit>;
-    };
-
-    /*
-    td_Q_Q: "tap dance: Q / Q / quit / loudquit"
-    Single tap:    Q
-    Double tap:    Q
-    Triple tap:    quit
-    Quadruple tap: loudquit
-    Tapping term: 150ms
-    */
-    td_qQ: td_qQ {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <150>;
-        bindings = <&macro_quit>, <&macro_loudquit>;
+        tapping-term-ms = <300>;
+        bindings = <&macro_quit>, <&macro_loudquit>, <&macro_loudquitall>;
     };
 
     /*
@@ -278,7 +262,7 @@ you must define the defaults BEFORE including the header
     td_w_fmtw: td_w_fmtw {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <350>;
+        tapping-term-ms = <300>;
         bindings = <&macro_noaw>, <&macro_write>;
     };
 
@@ -401,7 +385,7 @@ you must define the defaults BEFORE including the header
             bindings = <
 /*1*/       /*2*/       /*3*/       /*4*/                  /*5*/                   /*6*/               /*7*/     /**/ /*C1*/     /*C2*/             /*C3*/   /*|*/ /*C4*/     /*C5*/     /*C6*/    /**/ /*8*/     /*9*/               /*10*/                  /*11*/                  /*12*/            /*13*/          /*14*/
 &kp F1      &kp F2      &kp F3      &kp F4                 &kp F5                  &kp F6              &tog 1    /**/                                        /*|*/                                 /**/ &mo 3     &kp F7              &kp F8                  &kp F9                  &kp F10           &kp F11         &kp F12
-&trans      &td_qQ      &td_w_fmtw  &trans                 &macro_pf               &macro_gs           &kp PG_UP /**/                                        /*|*/                                 /**/ &kp HOME  &trans              &macro_gpo              &trans                  &td_importexport  &macro_scqad    &trans
+&trans      &td_q_Q_QA  &td_w_fmtw  &trans                 &macro_pf               &macro_gs           &kp PG_UP /**/                                        /*|*/                                 /**/ &kp HOME  &trans              &macro_gpo              &trans                  &td_importexport  &macro_scqad    &trans
 &trans      &trans      &macro_ps   &macro_sd              &macro_sf               &macro_sg           &kp PG_DN /**/            &kp LGUI           &kp LALT /*|*/ &kp LALT   &kp RGUI             /**/ &kp END   &trans              &macro_gofuncprevstart  &macro_gofuncnextstart  &trans            &macro_scaleqe  &trans
 &kp LSHIFT  &trans      &trans      &trans                 &td_hcui                &macro_prev_buffer            /**/                               &kp ENTER/*|*/ &trans                          /**/           &macro_gpullu_grph  &macro_gpullo_grph      &trans                  &trans            &kp UP          &macro_tmux_searchup
 &trans      &trans      &trans      &macro_browsertableft  &macro_browsertabright                                /**/ &macro_pv  &macro_tmuxvisual  &kp SPACE/*|*/ &kp RCTRL  &kp ENTER  &kp SPACE /**/                               &kp LEFT                &kp RIGHT               &trans            &kp DOWN        &kp LG(LS(LA(LC(W))))

@@ -8,6 +8,11 @@ compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
 bindings = <&kp LC(C)>, <&kp COLON>, <&kp Q>, <&kp EXCLAMATION>, <&kp ENTER>;
 };
+macro_loudquitall: macro_loudquitall{
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings = <&kp LC(C)>, <&kp COLON>, <&kp Q>, <&kp A>, <&kp EXCLAMATION>, <&kp ENTER>;
+};
 macro_browsertabright: macro_browsertabright{
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
