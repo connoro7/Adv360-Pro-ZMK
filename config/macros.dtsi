@@ -167,7 +167,7 @@ bindings = <&kp G>, <&kp P>, <&kp O>, <&kp PERIOD>;
 macro_gpullo_grph: macro_gpullo_grph{
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
-bindings = <&kp G>, <&kp P>, <&kp U>, <&kp L>, <&kp L>, <&kp O>, <&kp PERIOD>;
+bindings = <&kp G>, <&kp F>, <&kp P>, <&kp O>, <&kp PERIOD>;
 };
 macro_gpullu_grph: macro_gpullu_grph{
 compatible = "zmk,behavior-macro";
