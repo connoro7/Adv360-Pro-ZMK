@@ -343,21 +343,21 @@ you must define the defaults BEFORE including the header
 
     /*
     Special handling needed to get a mod-tap-like behavior with macros
-    mt_tmuxvisual: "mod-tap: KEYPRESS / tmux visual mode"
-    Hold:   KEYPRESS
+    mt_tmuxvisual: "mod-tap: RSHIFT / tmux visual mode"
+    Hold:   RSHIFT
     Tap:    Ctrl-B, Enter (tmux visual mode)
     Usage example:
         keymap {
             compatible = "zmk,keymap";
             default_layer {
                 bindings = <
-                    &mt_tmuxvisual RSHIFT 0  // Hold for RSHIFT, Tap for macro
+                    &mt_tmuxvisual RSHIFT 0 // Hold for RSHIFT, Tap for macro
                 >;
             };
         }
     */
     mt_tmuxvisual: mt_tmuxvisual {
-        compatible = "zmk,behavior-mod-tap";
+        compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
