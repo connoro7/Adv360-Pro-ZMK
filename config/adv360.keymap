@@ -129,6 +129,7 @@ you must define the defaults BEFORE including the header
         bindings = <&kp LC(SPACE)>, <&kp MINUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+
     mm_SCSM: mm_Space_CSMinus {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -340,6 +341,29 @@ you must define the defaults BEFORE including the header
         bindings = <&macro_importexport>;
     };
 
+    /*
+    Special handling needed to get a mod-tap-like behavior with macros
+    mt_tmuxvisual: "mod-tap: KEYPRESS / tmux visual mode"
+    Hold:   KEYPRESS
+    Tap:    Ctrl-B, Enter (tmux visual mode)
+    Usage example:
+        keymap {
+            compatible = "zmk,keymap";
+            default_layer {
+                bindings = <
+                    &mt_tmuxvisual RSHIFT 0  // Hold for RSHIFT, Tap for macro
+                >;
+            };
+        }
+    */
+    mt_tmuxvisual: mt_tmuxvisual {
+        compatible = "zmk,behavior-mod-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&kp>, <&macro_tmuxvisual>;
+    };
+
   };
 
     keymap {
@@ -362,10 +386,11 @@ you must define the defaults BEFORE including the header
 &kp EQUAL  &kp N1  &kp N2             &kp N3    &kp N4     &kp N5  &tog 1    /**/                                   /*|*/                                    /**/ &mo 3     &kp N6  &kp N7    &kp N8     &kp N9    &kp N0      &kp MINUS
 &kp TAB    &kp Q   &kp W              &kp E     &kp R      &kp T   &kp PG_UP /**/                                   /*|*/                                    /**/ &td_home  &kp Y   &kp U     &kp I      &kp O     &kp P       &kp BSLH
 &kp TAB    &kp A   &kp S              &lt 5 D   &lt 4 F    &kp G   &kp PG_DN /**/           &kp LGUI  &kp LALT      /*|*/ &kp RALT       &kp LGUI            /**/ &td_end   &kp H   &kp J     &kp K      &kp L     &lt 8 SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X              &kp C     &kp V      &kp B             /**/                     &lt 7 LC(B)   /*|*/ &lt 6 RC(B)                        /**/           &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH    &mt RSHIFT &macro_tmuxvisual
+&kp LSHFT  &kp Z   &kp X              &kp C     &kp V      &kp B             /**/                     &lt 7 LC(B)   /*|*/ &lt 6 RC(B)                        /**/           &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH    &mt_tmuxvisual RSHIFT 0
 &mo 2      &trans  &macro_adminadmin  &kp LEFT  &kp RIGHT                    /**/ &kp BSPC  &kp DEL   &mt LCTRL ESC /*|*/ &mt RCTRL TAB  &kp ENTER  &mm_SCSM /**/                   &kp DOWN  &kp UP     &kp LBKT  &kp RBKT    &lt 2 LS(LC(SPACE))
             >;
         };
+
         /* layer 1 */
         keypad {
             display-name = "Kp";
