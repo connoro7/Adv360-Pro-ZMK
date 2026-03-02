@@ -342,6 +342,26 @@ you must define the defaults BEFORE including the header
     };
 
     /*
+    custom mod-tap behavior to allow for tap-preferred behavior with macros
+    usage examples:
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                &my_mt // Hold for modifier, Tap for macro
+            >;
+        };
+    };
+    */
+    my_mt: my_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+    };
+
+    /*
     Special handling needed to get a mod-tap-like behavior with macros
     mt_tmuxvisual: "mod-tap: RSHIFT / tmux visual mode"
     Hold:   RSHIFT
