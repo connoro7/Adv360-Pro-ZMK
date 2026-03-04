@@ -9,7 +9,17 @@ SELINUX1 := :z
 SELINUX2 := ,z
 endif
 
-.PHONY: all left clean_firmware clean_image clean
+.PHONY: help all left clean_firmware clean_image clean
+
+help:
+	@echo "Usage:"
+	@echo " make all            - Build firmware for both left and right halves"
+	@echo " make left           - Build firmware for left half only"
+	@echo " make clean_firmware - Remove generated firmware files"
+	@echo " make clean_image    - Remove generated Docker images"
+	@echo " make clean          - Remove generated firmware and Docker images"
+	@echo " make help           - Show this help message"
+
 
 all:
 	$(shell bin/get_version_local.sh clique >> /dev/null)
