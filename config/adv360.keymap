@@ -138,15 +138,15 @@ you must define the defaults BEFORE including the header
     };
 
     /*
-    mm_WQ: "mod-morph: writeall / quit"
-    Default:    macro_writeall
-    +SHIFT:     macro_quit
+    td_WQ: "tap dance: writeall / quit"
+    Single tap:    macro_writeall
+    Double tap:    macro_quit
     */
-    mm_WQ: mm_WQ {
-        compatible = "zmk,behavior-mod-morph";
+    td_WQ: td_WQ {
+        compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
+        tapping-term-ms = <300>;
         bindings = <&macro_writeall>, <&macro_quit>;
-        mods = <(MOD_LCTL|MOD_RCTL)>;
     };
 
     /*
@@ -419,7 +419,7 @@ you must define the defaults BEFORE including the header
 &kp TAB    &kp Q              &kp W     &kp E     &kp R      &kp T   &kp PG_UP /**/                                   /*|*/                                    /**/ &td_home  &kp Y   &kp U     &kp I      &kp O     &kp P       &kp BSLH
 &kp TAB    &kp A              &kp S     &lt 5 D   &lt 4 F    &kp G   &kp PG_DN /**/           &kp LGUI  &kp LALT      /*|*/ &kp RALT       &kp LGUI            /**/ &td_end   &kp H   &kp J     &kp K      &kp L     &lt 8 SEMI  &kp SQT
 &kp LSHFT  &kp Z              &kp X     &kp C     &kp V      &kp B             /**/                     &lt 7 LC(B)   /*|*/ &lt 6 RC(B)                        /**/           &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH    &macro_tmuxvisual
-&mo 2      &macro_adminadmin  &td_hcui  &kp LEFT  &kp RIGHT                    /**/ &kp BSPC  &kp DEL   &mt LCTRL ESC /*|*/ &mt RCTRL TAB  &kp ENTER  &mm_SCSM /**/                   &kp DOWN  &kp UP     &kp LBKT  &kp RBKT    &mm_WQ
+&mo 2      &macro_adminadmin  &td_hcui  &kp LEFT  &kp RIGHT                    /**/ &kp BSPC  &kp DEL   &mt LCTRL ESC /*|*/ &mt RCTRL TAB  &kp ENTER  &mm_SCSM /**/                   &kp DOWN  &kp UP     &kp LBKT  &kp RBKT    &td_WQ
             >;
         };
 
