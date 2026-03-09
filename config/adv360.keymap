@@ -146,7 +146,7 @@ you must define the defaults BEFORE including the header
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&macro_writeall>, <&macro_quit>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
     };
 
     /*
