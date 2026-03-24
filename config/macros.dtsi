@@ -62,7 +62,7 @@ bindings = <&kp LC(B)>, <&kp ENTER>;
 macro_tmux_prefix_t: macro_tmux_prefix_t{
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
-bindings = <&macro_tmuxprefix>, <&kp T>;
+bindings = <&kp LC(B)>, <&kp T>;
 };
 macro_gofuncprevstart: macro_gofuncprevstart{
 compatible = "zmk,behavior-macro";
