@@ -22,7 +22,7 @@ help:
 
 
 all:
-	$(shell bin/get_version_local.sh clique >> /dev/null)
+	$(shell bin/get_version_local.sh >> /dev/null)
 	$(DOCKER) build --tag zmk --file Dockerfile .
 	$(DOCKER) run --rm -it --name zmk \
 		-v $(PWD)/firmware:/app/firmware$(SELINUX1) \
@@ -34,7 +34,7 @@ all:
 	git checkout config/version.dtsi
 
 left:
-	$(shell bin/get_version_local.sh clique >> /dev/null)
+	$(shell bin/get_version_local.sh >> /dev/null)
 	$(DOCKER) build --tag zmk --file Dockerfile .
 	$(DOCKER) run --rm -it --name zmk \
 		-v $(PWD)/firmware:/app/firmware$(SELINUX1) \
